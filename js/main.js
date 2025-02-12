@@ -1,6 +1,6 @@
 const headerItems = [
   {
-    img: "img/tracks_top.jpg",
+    img: "img/transparent.png",
     text: "Tracks Collection",
     alt: "tracks collection 2",
   },
