@@ -1,81 +1,106 @@
-# F1 Poster Shop
+# 🏎️ F1 Poster Shop (HTML, JavaScript, SCSS)
 
-## Project description
+> **Case:** Build a modern and fully responsive frontend website for showcasing and selling premium Formula 1 posters. The project focuses on delivering high performance, aesthetic design, and a smooth user experience across all devices.
 
-F1 Poster Shop is a modern, responsive frontend website made in **HTML**, **JavaScript**, **CSS**, **SCSS/SASS** technologies, where users can browse and buy posters related to Formula 1. The offer includes unique posters of drivers, teams and race tracks.
+> **Tech Stack:** `HTML5`, `CSS3`, `SCSS/SASS`, `JavaScript`, `Webpack` (optional).
 
-The website stands out with its aesthetic design, intuitive navigation and high performance, providing users with comfortable online shopping.
+---
 
-## Availability
+## 🚀 Usage
 
-The website is available at: [f1.dawidolko.pl](https://f1.dawidolko.pl)
+### Running the Project Locally
 
-## Features
-
-- **Product catalog**:
-- Posters presenting famous F1 drivers, racing teams and legendary race tracks.
-- Each product has a detailed description, price and photo.
-
-- **Responsive design**:
-- The site has been optimized for mobile, tablet and desktop devices.
-
-- **Dynamic frontend**:
-- Interactive elements such as category filters and product search.
-
-- **Aesthetic user interface**:
-- **SCSS/SASS** has been used for styling, allowing for a more organized and modular CSS code.
-
-## Technologies
-
-- **HTML5**: site structure.
-- **CSS3 / SCSS / SASS**: styling and responsiveness.
-- **JavaScript**: dynamic functionalities.
-- **Git**: project version management.
-- **Webpack** _(optional)_: SCSS/SASS compilation and frontend code optimization.
-
-## Directory structure
-
-```plaintext
-├── index.html # Main page
-├── css/ # CSS files
-├── scss/ # SCSS/SASS files
-├── js/ # JavaScript scripts
-├── img/ # Product images and graphic elements
-└── README.md # Project documentation
-```
-
-## How to run the project locally?
-
-1. Clone the repository:
+- Clone the repository:
 
 ```bash
 git clone https://github.com/dawidolko/F1-Website-Design.git
-```
-
-2. Go to the project directory:
-
-```bash
 cd F1-Website-Design
 ```
 
-3. Run the `index.html` file in your browser.
+- Open the `index.html` file in your browser.
 
-_(Optional)_ If you are using Webpack or another build tool: 4. Install dependencies:
+_(Optional, if using Webpack or another build tool)_
+
+- Install project dependencies:
 
 ```bash
 npm install
 ```
 
-5. Start the development server:
+- Start the development server:
 
 ```bash
 npm start
 ```
 
-## Author
+---
 
-The site was created by **Dawid Olko** as part of the development of the Formula 1 project.
+## 📈 Features
 
-## License
+- **Product Catalog:**
+  - Posters featuring famous F1 drivers, teams, and legendary race tracks.
+  - Each product includes a detailed description, price, and high-quality image.
 
-The project is released under the MIT license. Details can be found in the `LICENSE` file.
+- **Responsive Design:**
+  - Optimized for mobile phones, tablets, and desktop devices.
+
+- **Dynamic Frontend:**
+  - Interactive elements such as product search and category filtering for enhanced user experience.
+
+- **Aesthetic User Interface:**
+  - Styled with modular and organized SCSS/SASS for maintainability and better structure.
+
+- **High Performance:**
+  - Optimized loading and smooth navigation for a professional online shopping experience.
+
+---
+
+## 🧠 Technologies
+
+- **HTML5** – Structure of the website.
+- **CSS3 / SCSS / SASS** – Styling and responsiveness.
+- **JavaScript** – Interactive functionalities.
+- **Git** – Version control.
+- **Webpack** (optional) – Build tool for compiling SCSS/SASS and optimizing frontend assets.
+
+---
+
+## 📂 Project Structure
+
+```plaintext
+F1-Website-Design/
+├── index.html         # Main entry page
+├── css/               # Compiled CSS files
+├── scss/              # SCSS/SASS source files
+├── js/                # JavaScript scripts
+├── img/               # Images of products and graphics
+└── README.md          # Project documentation
+```
+
+---
+
+## 🖼️ Screenshots
+
+[<img src="img/f1.dawidolko.pl_.png" width="80%"/>](img/f1.dawidolko.pl_.png)
+
+---
+
+## 🌍 Availability
+
+The project is deployed and available at:  
+[**https://f1.dawidolko.pl**](https://f1.dawidolko.pl)
+
+---
+
+## 🙋‍♂️ Author
+
+Created by **Dawid Olko**  
+> This project is part of the ongoing Formula 1 web development series.
+
+---
+
+## 📜 License
+
+The **F1 Poster Shop** project is licensed under the [MIT License](LICENSE).
+
+---
