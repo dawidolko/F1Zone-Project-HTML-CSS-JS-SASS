@@ -84,7 +84,7 @@ const slideContainer = document.querySelector(".slider__gallery");
 
 const BestsellersId = [8, 10, 12, 16, 7, 14, 11];
 const Bestsellers = modalProduct.filter((element) =>
-  BestsellersId.includes(element.id)
+  BestsellersId.includes(element.id),
 );
 
 const renderSlider = () => {

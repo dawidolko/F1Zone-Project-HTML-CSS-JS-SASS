@@ -128,5 +128,3 @@ Created by **Dawid Olko** - Part of the ongoing Formula 1 web development series
 This project is open source and available under the [MIT License](LICENSE).
 
 ---
-
-⭐ **Found this helpful?** Give it a star and share with fellow frontend developers!

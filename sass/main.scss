@@ -63,7 +63,7 @@ body::-webkit-scrollbar-thumb:hover {
   width: 100%;
   height: 8vh;
   z-index: 10;
-  background-color: rgb(19, 19, 19);
+  background-color: $dark;
   color: $white;
 
   &__body {
@@ -89,7 +89,7 @@ body::-webkit-scrollbar-thumb:hover {
     left: 0;
     height: 30vh;
     width: 100%;
-    background-color: rgb(21, 96, 99);
+    background-color: $secondary;
     transition: transform 0.3s ease;
     transform: translateX(-100%);
     z-index: 10;
@@ -123,7 +123,7 @@ body::-webkit-scrollbar-thumb:hover {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: rgb(156, 31, 9);
+    background-color: $main;
     font-size: 1rem;
     color: $white;
     transform: translateX(-50%);
@@ -131,7 +131,7 @@ body::-webkit-scrollbar-thumb:hover {
 
   &__total {
     padding: 0.1em;
-    color: #8e928f;
+    color: #9e9e9e;
   }
 }
 
@@ -140,7 +140,7 @@ body::-webkit-scrollbar-thumb:hover {
   top: 8vh;
   right: 0;
   padding: 1em 3em;
-  background-color: #d4d7d8;
+  background-color: $light-gray;
   transform: translateX(100%);
   z-index: 10;
   transition: 0.3s;
@@ -159,7 +159,9 @@ body::-webkit-scrollbar-thumb:hover {
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow:
+    0 3px 6px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
 
   &__slide {
     position: absolute;
@@ -204,7 +206,7 @@ body::-webkit-scrollbar-thumb:hover {
     padding: 0.6em 1.8em;
     border-radius: 20px;
     color: $white;
-    background-color: #396e75;
+    background-color: $main;
     font-family: $heading;
   }
 
@@ -221,7 +223,7 @@ body::-webkit-scrollbar-thumb:hover {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    color: #858383;
+    color: #9e9e9e;
     font-size: 2rem;
   }
 
@@ -242,7 +244,7 @@ body::-webkit-scrollbar-thumb:hover {
   gap: 1.5em;
   padding: 6em 0.5em;
   margin-bottom: 5em;
-  background-color: #262727;
+  background-color: $dark;
 
   &__tracks,
   &__teams,
@@ -255,7 +257,7 @@ body::-webkit-scrollbar-thumb:hover {
 
   &__tracks,
   &__drivers {
-    background-color: #5297a3;
+    background-color: $secondary;
   }
 
   &__heading {
@@ -276,7 +278,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
 
   &__teams {
-    background-color: #9e8797;
+    background-color: $dark-gray;
   }
 
   &__img {
@@ -316,7 +318,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
 
   &__content {
-    background-color: #d5e6eb;
+    background-color: $light-gray;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -329,7 +331,7 @@ body::-webkit-scrollbar-thumb:hover {
 
   &__details {
     @include flexCenter(column);
-    background-color: #d5e6eb;
+    background-color: $light-gray;
   }
 
   &__title {
@@ -347,7 +349,7 @@ body::-webkit-scrollbar-thumb:hover {
     text-align: center;
     text-transform: capitalize;
     transition: 0.4s;
-    background-color: #181818;
+    background-color: $dark;
     color: $white;
   }
 
@@ -363,7 +365,7 @@ body::-webkit-scrollbar-thumb:hover {
   align-items: center;
   gap: 1em;
   padding: 5em 0;
-  background-color: #ddf2f8ea;
+  background-color: $light-gray;
 
   &__heading {
     text-transform: capitalize;
@@ -378,7 +380,10 @@ body::-webkit-scrollbar-thumb:hover {
     padding-left: 0.5em;
     border: none;
     opacity: 0;
-    transition: height 0.3s, opacity 0.3s, box-shadow 0.3s;
+    transition:
+      height 0.3s,
+      opacity 0.3s,
+      box-shadow 0.3s;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
@@ -402,11 +407,11 @@ body::-webkit-scrollbar-thumb:hover {
     padding: 0.5em 1em;
     border-radius: 10px;
     color: #000;
-    background-color: #d0dadd;
+    background-color: #e0e0e0;
   }
 
   &__active {
-    background-color: #252525;
+    background-color: $dark;
     color: $white;
   }
 
@@ -421,8 +426,10 @@ body::-webkit-scrollbar-thumb:hover {
     width: 300px;
     height: 400px;
     object-fit: cover;
-    background-color: #f7f4f4;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    background-color: $white;
+    box-shadow:
+      0 3px 6px rgba(0, 0, 0, 0.16),
+      0 3px 6px rgba(0, 0, 0, 0.23);
     color: #000;
   }
 
@@ -442,7 +449,7 @@ body::-webkit-scrollbar-thumb:hover {
   &__title {
     width: 100%;
     padding-top: 0.5em;
-    border-top: 1px solid rgb(197, 188, 188);
+    border-top: 1px solid #e0e0e0;
     text-align: center;
     font-size: 2rem;
     font-family: $heading;
@@ -452,7 +459,7 @@ body::-webkit-scrollbar-thumb:hover {
     margin-bottom: 1em;
     font-size: 1.8rem;
     font-weight: 600;
-    color: rgb(29, 29, 29);
+    color: $dark;
   }
 
   &__buttons {
@@ -466,7 +473,7 @@ body::-webkit-scrollbar-thumb:hover {
     text-transform: capitalize;
     border-radius: 5px;
     color: $white;
-    background-color: #252525;
+    background-color: $dark;
   }
 
   @keyframes fade {
@@ -521,13 +528,13 @@ body::-webkit-scrollbar-thumb:hover {
     flex-direction: column;
     height: 100%;
     padding-bottom: 2em;
-    background-color: #f7f4f4;
+    background-color: $white;
   }
 
   &__box {
     position: relative;
     overflow: hidden;
-    background-color: #0d464a;
+    background-color: $secondary;
   }
 
   &__icon {
@@ -560,7 +567,7 @@ body::-webkit-scrollbar-thumb:hover {
     width: 60%;
     height: 1px;
     border: none;
-    background-color: #b1adad;
+    background-color: #bdbdbd;
   }
 
   &__text-span {
@@ -572,7 +579,7 @@ body::-webkit-scrollbar-thumb:hover {
     padding: 0.6em 1.7em;
     border-radius: 5px;
     color: $white;
-    background-color: #222424;
+    background-color: $dark;
   }
 
   &__close {
@@ -585,17 +592,17 @@ body::-webkit-scrollbar-thumb:hover {
   &__view-more {
     margin-top: 2em;
     padding: 0.6em 1.8em;
-    color: rgb(10, 10, 10);
+    color: $black;
     border-radius: 20px;
     background-color: transparent;
-    border: 1px solid rgb(29, 29, 29);
+    border: 1px solid $black;
     font-size: 1.6rem;
   }
 }
 
 .offer {
   padding: 2em 0;
-  background-color: #0d464a;
+  background-color: $secondary;
   overflow: hidden;
   font-family: $heading;
 
@@ -635,7 +642,7 @@ body::-webkit-scrollbar-thumb:hover {
   &__btn {
     display: block;
     padding: 0.7em 1.7em;
-    background-color: #bb9b32;
+    background-color: $main;
     border-radius: 20px;
     color: $white;
   }
@@ -663,7 +670,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .service {
   padding: 3em 0;
-  background-color: #ddf2f8ea;
+  background-color: $light-gray;
 
   &__content {
     @include flexCenter(column);
@@ -697,7 +704,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .contact {
   padding: 3em 0;
-  background-color: rgb(27, 27, 27);
+  background-color: $dark;
 
   &__body {
     @include flexCenter(column);
@@ -733,8 +740,8 @@ body::-webkit-scrollbar-thumb:hover {
     @include flexCenter(column);
     width: 220px;
     padding: 2em 0;
-    border-bottom: 1px solid rgb(59, 59, 59);
-    border-top: 1px solid rgb(59, 59, 59);
+    border-bottom: 1px solid #616161;
+    border-top: 1px solid #616161;
   }
 
   &__media-title {
@@ -776,14 +783,14 @@ body::-webkit-scrollbar-thumb:hover {
   &__message-mail,
   &__message-tel {
     display: none;
-    color: #ca9635;
+    color: $main;
     font-size: 1.4rem;
   }
 }
 
 .footer {
   padding: 1.5em 0;
-  background-color: #111;
+  background-color: $darker;
   color: $white;
   text-align: center;
 }
@@ -795,7 +802,7 @@ body::-webkit-scrollbar-thumb:hover {
   bottom: 0;
   width: 100%;
   padding: 2em 0;
-  background-color: rgb(37, 37, 37);
+  background-color: $secondary;
   color: $white;
   z-index: 9;
   opacity: 0;

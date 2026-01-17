@@ -130,7 +130,7 @@ body {
   left: 0;
   height: 30vh;
   width: 100%;
-  background-color: rgb(21, 96, 99);
+  background-color: #2d2d2d;
   transition: transform 0.3s ease;
   transform: translateX(-100%);
   z-index: 10;
@@ -165,7 +165,7 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: rgb(156, 31, 9);
+  background-color: #e10600;
   font-size: 1rem;
   color: #ffffff;
   transform: translateX(-50%);
@@ -198,7 +198,9 @@ body {
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow:
+    0 3px 6px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .header__slide {
   position: absolute;
@@ -243,7 +245,7 @@ body {
   padding: 0.6em 1.8em;
   border-radius: 20px;
   color: #ffffff;
-  background-color: #396e75;
+  background-color: #e10600;
   font-family: "Oswald", sans-serif;
 }
 .header__cars {
@@ -280,7 +282,7 @@ body {
   gap: 1.5em;
   padding: 6em 0.5em;
   margin-bottom: 5em;
-  background-color: #262727;
+  background-color: #1a1a1a;
 }
 .collection__tracks,
 .collection__teams,
@@ -313,7 +315,7 @@ body {
   border-radius: 5px;
 }
 .collection__teams {
-  background-color: #9e8797;
+  background-color: #424242;
 }
 .collection__img {
   width: 350px;
@@ -395,7 +397,7 @@ body {
   align-items: center;
   gap: 2em;
   padding: 5em 0;
-  background-color: rgba(221, 242, 248, 0.92);
+  background-color: #f5f5f5;
 }
 
 .cars__heading {
@@ -433,7 +435,9 @@ body {
   color: #000;
   background-color: #d0dadd;
   font-size: 1.4rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .cars__filter-btn:hover {
@@ -460,10 +464,14 @@ body {
   width: 300px;
   height: 400px;
   background-color: #f7f4f4;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow:
+    0 3px 6px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
   border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .cars__box:hover {
@@ -518,7 +526,9 @@ body {
   color: #ffffff;
   background-color: #252525;
   font-size: 1.2rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .cars__btn:hover {
@@ -577,7 +587,7 @@ body {
 .product__box {
   position: relative;
   overflow: hidden;
-  background-color: #0d464a;
+  background-color: #2d2d2d;
 }
 .product__icon {
   visibility: hidden;
@@ -635,7 +645,7 @@ body {
 
 .offer {
   padding: 2em 0;
-  background-color: #0d464a;
+  background-color: #2d2d2d;
   overflow: hidden;
   font-family: "Oswald", sans-serif;
 }
@@ -701,7 +711,7 @@ body {
 
 .service {
   padding: 3em 0;
-  background-color: rgba(221, 242, 248, 0.9176470588);
+  background-color: #f5f5f5;
 }
 .service__content {
   display: flex;
@@ -1063,7 +1073,7 @@ ul {
     cursor: pointer;
   }
   .slider__btn:hover {
-    background-color: #0d464a;
+    background-color: #2d2d2d;
   }
   .slider__left,
   .slider__right {
@@ -1235,7 +1245,9 @@ ul {
   }
   .product__close {
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
   }
   .product__close:hover {
     background-color: #000000;
@@ -1266,7 +1278,10 @@ ul {
     transition: 0.8s;
   }
   .product__view-more {
-    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      border 0.3s ease;
   }
   .product__view-more:hover {
     background-color: #104d52;
@@ -1278,7 +1293,9 @@ ul {
     transform: scale(2);
   }
   .cookie__btn {
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
   }
   .cookie__btn:hover {
     background-color: #ffffff;

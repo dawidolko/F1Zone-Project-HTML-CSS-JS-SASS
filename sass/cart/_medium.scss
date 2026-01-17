@@ -1,127 +1,130 @@
 @media (min-width: 768px) {
-	.nav {
-		.nav__menu {
-			display: none;
-		}
+  .nav {
+    .nav__menu {
+      display: none;
+    }
 
-		&__links {
-			position: unset;
-			flex-direction: row;
-			top: unset;
-			height: unset;
-			width: unset;
-			background-color: unset;
-			transform: unset;
-		}
+    &__links {
+      position: unset;
+      flex-direction: row;
+      top: unset;
+      height: unset;
+      width: unset;
+      background-color: unset;
+      transform: unset;
+    }
 
-		&__link {
-			transition: color 0.3s ease;
+    &__link {
+      transition: color 0.3s ease;
 
-			&:hover {
-				color: $main;
-			}
-		}
+      &:hover {
+        color: $main;
+      }
+    }
 
-		&__logo {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			gap: 0.2em;
-			color: rgb(253, 253, 253);
-			font-size: 2.5rem;
-		}
+    &__logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.2em;
+      color: $white;
+      font-size: 2.5rem;
+    }
 
-		&__logo-img {
-			width: 40px;
-		}
+    &__logo-img {
+      width: 40px;
+    }
 
-		&__basket {
-			font-size: 2.5rem;
-		}
+    &__basket {
+      font-size: 2.5rem;
+    }
 
-		&__quantity {
-			top: -7px;
-			width: 22px;
-			height: 22px;
-			font-size: 1.2rem;
-		}
-	}
+    &__quantity {
+      top: -7px;
+      width: 22px;
+      height: 22px;
+      font-size: 1.2rem;
+    }
+  }
 
-	.payment {
-		width: 400px;
-		border-radius: 10px;
+  .payment {
+    width: 400px;
+    border-radius: 10px;
 
-		&__button {
-			transition: background-color 0.3s ease, color 0.3s ease;
+    &__button {
+      transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 
-			&:hover {
-				background-color: #a8882e;
-				color: $white;
-			}
-		}
-	}
+      &:hover {
+        background-color: $accent;
+        color: $white;
+      }
+    }
+  }
 
-	.cart {
-		flex-direction: row;
-		justify-content: center;
-		gap: 2em;
-		padding: 5em 0;
-	
+  .cart {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+    padding: 5em 0;
 
-	&__wrapper {
-		width: 500px;
-	}
+    &__wrapper {
+      width: 500px;
+    }
 
-		&__total-price {
-			font-size: 2.5rem;
-		}
+    &__total-price {
+      font-size: 2.5rem;
+    }
 
-		&__heading {
-			padding-left: 1em;
-			text-align: start;
-			font-size: 4rem;
-		}
+    &__heading {
+      padding-left: 1em;
+      text-align: start;
+      font-size: 4rem;
+    }
 
-		&__continue {
-			transition: background-color 0.3s ease, color 0.3s ease;
+    &__continue {
+      transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 
-			&:hover {
-				background-color: #a8882e;
-			}
-		}
+      &:hover {
+        background-color: $accent;
+      }
+    }
 
-		&__minus,
-		&__plus {
-			cursor: pointer;
-		}
-	}
+    &__minus,
+    &__plus {
+      cursor: pointer;
+    }
+  }
 
-	.contact {
-		&__body {
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: start;
-		}
+  .contact {
+    &__body {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: start;
+    }
 
-		&__content-icons,
-		&__media-icon {
-			cursor: pointer;
-			transition: color 0.3s ease;
+    &__content-icons,
+    &__media-icon {
+      cursor: pointer;
+      transition: color 0.3s ease;
 
-			&:hover {
-				color: $main;
-			}
-		}
+      &:hover {
+        color: $main;
+      }
+    }
 
-		&__content-title {
-			text-align: start;
-		}
+    &__content-title {
+      text-align: start;
+    }
 
-		&__content-open {
-			&:hover {
-				color: unset;
-				cursor: auto;
-			}
-		}
-	}
+    &__content-open {
+      &:hover {
+        color: unset;
+        cursor: auto;
+      }
+    }
+  }
 }

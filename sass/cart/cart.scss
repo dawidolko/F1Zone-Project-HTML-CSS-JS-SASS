@@ -20,11 +20,7 @@ body {
 	width: 100%;
 	height: 8vh;
 	z-index: 10;
-	background-color: rgb(19, 19, 19);
-	color: $white;
-
-	&__body {
-		display: flex;
+	background-color: $dark;
 		justify-content: space-between;
 		align-items: center;
 		height: 100%;
@@ -88,7 +84,7 @@ body {
 
 	&__total {
 		padding: 0.1em;
-		color: #8e928f;
+		color: #9e9e9e;
 	}
 }
 
@@ -97,7 +93,7 @@ body {
 	top: 8vh;
 	right: 0;
 	padding: 1em 3em;
-	background-color: #d4d7d8;
+	background-color: $light-gray;
 	transform: translateX(100%);
 	z-index: 10;
 	transition: 0.3s;
@@ -123,12 +119,8 @@ body {
 		padding: 2.5em 0 1em;
 		font-size: 3rem;
 		text-align: center;
-		background-color: rgb(247, 246, 245);
-		border-bottom: 1px solid rgb(231, 228, 228);
-	}
-
-	&__table {
-		border-collapse: collapse;
+		background-color: $white;
+		border-bottom: 1px solid #e0e0e0;
 	}
 
 	&__table-titles {
@@ -138,10 +130,7 @@ body {
 	&__table-content {
 		text-align: center;
 		td {
-			border: 1px solid rgb(223, 220, 220);
-		}
-	}
-
+			border: 1px solid #e0e0e0;
 	&__table-img {
 		height: 70px;
 		width: 70px;
@@ -166,9 +155,7 @@ body {
 
 	&__continue {
 		padding: 1em 2em;
-		background-color: #396e75;
-		color: $white;
-		font-size: 1.4rem;
+		background-color: $main;
 		border-radius: 50px;
 	}
 
@@ -183,7 +170,7 @@ body {
 	width: 100%;
 	height: 100%;
 	padding: 2em;
-	background-color: #2b5b61;
+	background-color: $secondary;
 	color: $white;
 
 	&__title {
@@ -206,10 +193,8 @@ body {
 		margin: 1em 0;
 		background-color: inherit;
 		border: none;
-		color: #d4d7d8;
-		border-bottom: 1px solid rgb(250, 250, 250);
-
-		&:focus {
+		color: #e0e0e0;
+		border-bottom: 1px solid #e0e0e0;
 			outline: none;
 		}
 	}
@@ -219,8 +204,7 @@ body {
 	}
 
 	&__input::placeholder {
-		color: rgb(163, 163, 163);
-	}
+		color: #9e9e9e;
 
 	&__icons {
 		display: flex;
@@ -248,14 +232,14 @@ body {
 		padding: 0.8em 0;
 		border-radius: 10px;
 		font-size: 1.6rem;
-		background-color: #ececec;
-		color: rgb(20, 20, 20);
+		background-color: $light-gray;
+		color: $black;
 	}
 }
 
 .contact {
 	padding: 3em 0;
-	background-color: rgb(27, 27, 27);
+	background-color: $dark;
 
 	&__body {
 		@include flexCenter(column);
@@ -334,14 +318,14 @@ body {
 	&__message-mail,
 	&__message-tel {
 		display: none;
-		color: #ca9635;
+		color: $main;
 		font-size: 1.4rem;
 	}
 }
 
 .footer {
 	padding: 1.5em 0;
-	background-color: #111;
+	background-color: $darker;
 	color: #fff;
 	text-align: center;
 }
