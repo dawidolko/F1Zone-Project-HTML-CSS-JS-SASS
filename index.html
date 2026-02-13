@@ -11,6 +11,7 @@
       content="F1 merchandise, Formula 1 gear, racing collectibles, team apparel, F1 accessories, Red Bull, Ferrari, Mercedes" />
     <meta name="author" content="Dawid Olko" />
     <meta name="copyright" content="Dawid Olko" />
+    <meta name="theme-color" content="#e10600" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" type="image/png" href="./logo.png" />
@@ -23,10 +24,12 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet" />
     <title>F1Zone</title>
+    <link rel="preload" href="css/main.css" as="style" />
     <link rel="stylesheet" href="css/main.css" />
     <script
       src="https://kit.fontawesome.com/fdc09ecfc9.js"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+      async></script>
   </head>
   <body>
     <nav class="nav">
@@ -39,7 +42,12 @@
         </div>
         <a href="#">
           <div class="nav__logo">
-            <img src="img/logo.png" class="nav__logo-img" alt="logo image" />
+            <img
+              src="img/logo.png"
+              class="nav__logo-img"
+              alt="logo image"
+              width="50"
+              height="50" />
             <p>F1Zone</p>
           </div>
         </a>
@@ -85,9 +93,12 @@
           <h3 class="collection__heading">Tracks Collection</h3>
           <div class="collection__shadow">
             <img
-              src="img/tracks-collection.jpg"
+              src="img/tracks-collection.webp"
               alt="tracks collection"
-              class="collection__img" />
+              class="collection__img"
+              loading="lazy"
+              width="400"
+              height="300" />
           </div>
           <a class="collection__btn" href="#cars_id">explore more</a>
         </div>
@@ -95,9 +106,12 @@
           <h3 class="collection__heading">Teams Collection</h3>
           <div class="collection__shadow">
             <img
-              src="img/teams-collection.jpg"
+              src="img/teams-collection.webp"
               alt="teams collection"
-              class="collection__img" />
+              class="collection__img"
+              loading="lazy"
+              width="400"
+              height="300" />
           </div>
           <a class="collection__btn" href="#cars_id">explore more</a>
         </div>
@@ -105,9 +119,12 @@
           <h3 class="collection__heading">Drivers Collection</h3>
           <div class="collection__shadow">
             <img
-              src="img/drivers-collection.jpg"
+              src="img/drivers-collection.webp"
               alt="drivers collection"
-              class="collection__img" />
+              class="collection__img"
+              loading="lazy"
+              width="400"
+              height="300" />
           </div>
           <a class="collection__btn" href="#cars_id">explore more</a>
         </div>
@@ -174,7 +191,10 @@
           <img
             src="img/logo.png"
             alt="drivers collection posters"
-            class="offer__img" />
+            class="offer__img"
+            loading="lazy"
+            width="200"
+            height="200" />
         </div>
       </section>
 
@@ -184,7 +204,10 @@
             <img
               src="img/truck-delivery.webp"
               alt="delivery truck icon"
-              class="service__img service__truck" />
+              class="service__img service__truck"
+              loading="lazy"
+              width="80"
+              height="80" />
             <div class="service__text">
               <h4 class="service__title">FREE SHIPING</h4>
               <p class="service__describe">All orders over $150</p>
@@ -194,7 +217,10 @@
             <img
               src="img/credit-card.webp"
               alt="credit cart icon"
-              class="service__img" />
+              class="service__img"
+              loading="lazy"
+              width="80"
+              height="80" />
             <div class="service__text">
               <h4 class="service__title">QUICK PAYMENT</h4>
               <p class="service__describe">100% secure payment</p>
@@ -204,7 +230,10 @@
             <img
               src="img/receipt-refund.webp"
               alt="return arrow icon"
-              class="service__img service__return" />
+              class="service__img service__return"
+              loading="lazy"
+              width="80"
+              height="80" />
             <div class="service__text">
               <h4 class="service__title">FREE RETURNS</h4>
               <p class="service__describe">Money back in 30 days</p>
@@ -221,7 +250,10 @@
                 <img
                   src="img/logo.png"
                   class="contact__logo-img"
-                  alt="logo image" />
+                  alt="logo image"
+                  loading="lazy"
+                  width="50"
+                  height="50" />
                 <p>F1Zone</p>
               </div>
             </a>
@@ -288,10 +320,10 @@
       </div>
     </div>
 
-    <script src="js/footer.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/cart.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/modal.js"></script>
+    <script src="js/footer.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/modal.js" defer></script>
   </body>
 </html>

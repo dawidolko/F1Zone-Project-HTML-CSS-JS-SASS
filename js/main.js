@@ -1,16 +1,16 @@
 const headerItems = [
   {
-    img: "img/transparent.png",
+    img: "img/f1-racing-animated.svg",
     text: "Tracks Collection",
-    alt: "tracks collection 2",
+    alt: "F1 racing car in motion - tracks collection",
   },
   {
-    img: "img/teams_top.jpg",
+    img: "img/f1-racing-animated.svg",
     text: "Teams Collection",
     alt: "teams collection 2",
   },
   {
-    img: "img/drivers_top.jpg",
+    img: "img/f1-racing-animated.svg",
     text: "Drivers Collection",
     alt: "drivers collection 2",
   },

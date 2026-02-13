@@ -216,7 +216,7 @@ body {
   gap: 4em;
   height: 100vh;
   background-blend-mode: darken;
-  background: url("../img/background4.jpg") rgba(0, 0, 0, 0.7);
+  background: url("../img/background4.webp") rgba(0, 0, 0, 0.7);
   background-size: cover;
   background-position: center;
 }
@@ -249,12 +249,12 @@ body {
   font-family: "Oswald", sans-serif;
 }
 .header__cars {
-  margin-top: 50px;
+  margin-top: 250px;
   width: 100%;
   max-width: 450px;
   min-width: 400px;
   padding-right: 3em;
-  transform: rotate(15deg);
+  transform: rotate(7deg);
 }
 .header__arrow {
   position: absolute;

@@ -11,6 +11,7 @@
       content="athletic shoes, performance, durability, design" />
     <meta name="author" content="Krystian Ptak" />
     <meta name="copyright" content="Krystian Ptak" />
+    <meta name="theme-color" content="#e10600" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" type="image/png" href="./logo.png" />
@@ -23,10 +24,12 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet" />
     <title>F1Zone</title>
+    <link rel="preload" href="css/cart.css" as="style" />
     <link rel="stylesheet" href="css/cart.css" />
     <script
       src="https://kit.fontawesome.com/fdc09ecfc9.js"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+      async></script>
   </head>
   <body>
     <nav class="nav">
@@ -39,7 +42,12 @@
         </div>
         <a href="index.html">
           <div class="nav__logo">
-            <img src="img/logo.png" class="nav__logo-img" />
+            <img
+              src="img/logo.png"
+              class="nav__logo-img"
+              alt="logo image"
+              width="50"
+              height="50" />
             <p>F1Zone</p>
           </div>
         </a>
@@ -97,8 +105,20 @@
             class="payment__input" />
           <h2 class="payment__title">Card Information</h2>
           <div class="payment__icons">
-            <img src="./img/visa.webp" alt="" class="payment__icon" />
-            <img src="./img/master.webp" alt="" class="payment__icon" />
+            <img
+              src="./img/visa.webp"
+              alt="Visa card"
+              class="payment__icon"
+              loading="lazy"
+              width="60"
+              height="40" />
+            <img
+              src="./img/master.webp"
+              alt="Mastercard"
+              class="payment__icon"
+              loading="lazy"
+              width="60"
+              height="40" />
           </div>
           <input
             type="password"
@@ -128,7 +148,13 @@
           <div class="contact__logo">
             <a href="index.html">
               <div class="contact__logo-title">
-                <img src="img/logo.png" class="contact__logo-img" />
+                <img
+                  src="img/logo.png"
+                  class="contact__logo-img"
+                  alt="logo image"
+                  loading="lazy"
+                  width="50"
+                  height="50" />
                 <p>F1Zone</p>
               </div>
             </a>
@@ -179,7 +205,7 @@
       </p>
     </footer>
 
-    <script src="js/footer.js"></script>
-    <script src="js/cart.js"></script>
+    <script src="js/footer.js" defer></script>
+    <script src="js/cart.js" defer></script>
   </body>
 </html>
