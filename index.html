@@ -30,8 +30,36 @@
       src="https://kit.fontawesome.com/fdc09ecfc9.js"
       crossorigin="anonymous"
       async></script>
+  
+    <!-- Canonical URL: the authoritative address for this page. -->
+    <link rel="canonical" href="https://f1.dawidolko.pl/" />
+
+    <!-- Open Graph / Twitter: controls how the page renders when shared. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://f1.dawidolko.pl/" />
+    <meta property="og:title" content="F1Zone — Formula 1 Poster Shop" />
+    <meta property="og:description" content="Formula 1 poster shop with driver, team and track posters. Built with HTML, SASS and JavaScript." />
+    <meta property="og:site_name" content="F1Zone" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="F1Zone — Formula 1 Poster Shop" />
+    <meta name="twitter:description" content="Formula 1 poster shop with driver, team and track posters." />
+
+    <!-- Structured data: lets search engines describe the store in results. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Store",
+        "name": "F1Zone",
+        "url": "https://f1.dawidolko.pl",
+        "description": "Formula 1 poster shop with driver, team and track posters.",
+        "author": { "@type": "Person", "name": "Dawid Olko", "url": "https://dawidolko.pl" }
+      }
+    </script>
   </head>
   <body>
+    <!-- First focusable element: lets a keyboard user skip the navigation. -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <nav class="nav">
       <div class="nav__body container">
         <div class="nav__menu">
@@ -82,12 +110,13 @@
     </div>
 
     <header class="header">
+      <h1 class="visually-hidden">F1Zone — Formula 1 poster shop</h1>
       <i class="header__arrow header__arrow-left fa-solid fa-chevron-left"></i>
       <i class="header__arrow header__arrow-right fa-solid fa-chevron-right"></i
       >>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
       <section class="collection">
         <div class="collection__tracks">
           <h3 class="collection__heading">Tracks Collection</h3>
@@ -140,11 +169,12 @@
 
       <section class="cars" id="cars_id">
         <h2 class="cars__heading">Posters Collection</h2>
+        <label class="visually-hidden" for="search-input">Search products</label>
         <input
           class="cars__search-input"
           type="search"
           id="search-input"
-          placeholder="Wyszukaj produkt" />
+          placeholder="Search products" />
         <div class="cars__body">
           <button
             class="cars__filter-btn cars__active cars__filter-all"
