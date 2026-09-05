@@ -175,16 +175,7 @@ body::-webkit-scrollbar-thumb:hover {
     gap: 4em;
     height: 100vh;
     background-blend-mode: darken;
-      /*
-        Skrot `background: url(...)` bez rozmiaru i powtarzania zostawial wartosci
-        domyslne, wiec zdjecie toru kafelkowalo sie w poziomie — na szerokim ekranie
-        widac bylo dwie kopie obok siebie.
-      */
-      background-image: url("../img/background4.webp");
-      background-color: rgba(0, 0, 0, 0.7);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+    background: url("../img/background4.webp") rgba(0, 0, 0, 0.7);
   }
 
   &__active {
@@ -220,19 +211,12 @@ body::-webkit-scrollbar-thumb:hover {
   }
 
   &__cars {
-      /*
-        Bolid stoi niemal poziomo. Wczesniej mial `rotate(-35deg)`, co przy
-        poprzednim, owalnym rysunku jeszcze uchodzilo — przy sylwetce z
-        widocznymi skrzydlami i kolami wygladalo, jakby auto spadalo z toru.
-        Zostaje lekkie pochylenie sugerujace ruch, plus cien pod autem.
-      */
-      width: 100%;
-      max-width: 560px;
-      min-width: 320px;
-      padding-right: 2em;
-      transform: rotate(-4deg);
-      filter: drop-shadow(0 18px 22px rgba(0, 0, 0, 0.45));
-    }
+    width: 100%;
+    max-width: 450px;
+    min-width: 400px;
+    padding-right: 3em;
+    transform: rotate(-35deg);
+  }
 
   &__arrow {
     position: absolute;
@@ -307,8 +291,6 @@ body::-webkit-scrollbar-thumb:hover {
 .slider {
   @include flexCenter(row);
   padding: 3em 0;
-  // Kolejne slajdy stoja poza widokiem — bez tego strona scrolluje sie w bok.
-  overflow: hidden;
 
   &__heading {
     text-align: center;
@@ -871,23 +853,3 @@ body::-webkit-scrollbar-thumb:hover {
 
 @import "medium";
 @import "large";
-
-/*
-  Bolid na waskich ekranach — patrz komentarz w skompilowanym arkuszu.
-  Minimalna szerokosc rozpychala strone na telefonie.
-*/
-@media (max-width: 640px) {
-  .header__cars {
-    min-width: 0;
-    max-width: 100%;
-    padding-right: 0;
-  }
-}
-
-/*
-  Wysuwany koszyk i slajdy karuzeli stoja poza prawa krawedzia okna —
-  bez tego dokument przewijal sie w bok.
-*/
-html {
-  overflow-x: hidden;
-}
