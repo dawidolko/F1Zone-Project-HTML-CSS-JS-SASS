@@ -15,6 +15,38 @@ a {
   text-decoration: none;
 }
 
+img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  scrollbar-color: #c4c4c4 #f0f0f0;
+}
+
 body::-webkit-scrollbar {
   width: 15px;
 }
@@ -57,41 +89,6 @@ body::-webkit-scrollbar-thumb:hover {
   background: hsl(0, 0%, 80%);
 }
 
-.has-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: hsl(0, 0%, 80%);
-}
-
-img {
-  height: auto;
-  max-width: 100%;
-  display: block;
-}
-
-input,
-button,
-textarea,
-select {
-  font-family: inherit;
-}
-
-button {
-  border: none;
-  cursor: pointer;
-}
-
-textarea {
-  resize: vertical;
-}
-
-ul {
-  list-style-type: none;
-}
-
-body {
-  font-size: 1.6rem;
-  font-family: "Roboto", sans-serif;
-}
-
 .container {
   width: 100%;
   max-width: 95%;
@@ -104,7 +101,7 @@ body {
   width: 100%;
   height: 8vh;
   z-index: 10;
-  background-color: rgb(19, 19, 19);
+  background-color: #1a1a1a;
   color: #ffffff;
 }
 .nav__body {
@@ -172,7 +169,7 @@ body {
 }
 .nav__total {
   padding: 0.1em;
-  color: #8e928f;
+  color: #9e9e9e;
 }
 
 .basket {
@@ -180,7 +177,7 @@ body {
   top: 8vh;
   right: 0;
   padding: 1em 3em;
-  background-color: #d4d7d8;
+  background-color: #f5f5f5;
   transform: translateX(100%);
   z-index: 10;
   transition: 0.3s;
@@ -198,9 +195,7 @@ body {
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  box-shadow:
-    0 3px 6px rgba(0, 0, 0, 0.16),
-    0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .header__slide {
   position: absolute;
@@ -216,9 +211,16 @@ body {
   gap: 4em;
   height: 100vh;
   background-blend-mode: darken;
-  background: url("../img/background4.webp") rgba(0, 0, 0, 0.7);
+  /*
+    Skrot `background: url(...)` bez rozmiaru i powtarzania zostawial wartosci
+    domyslne, wiec zdjecie toru kafelkowalo sie w poziomie — na szerokim ekranie
+    widac bylo dwie kopie obok siebie.
+  */
+  background-image: url("../img/background4.webp");
+  background-color: rgba(0, 0, 0, 0.7);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 .header__active {
   opacity: 1;
@@ -240,7 +242,6 @@ body {
   color: #ffffff;
 }
 .header__btn {
-  width: -moz-fit-content;
   width: fit-content;
   padding: 0.6em 1.8em;
   border-radius: 20px;
@@ -249,19 +250,19 @@ body {
   font-family: "Oswald", sans-serif;
 }
 .header__cars {
-  margin-top: 250px;
   width: 100%;
-  max-width: 450px;
-  min-width: 400px;
-  padding-right: 3em;
-  transform: rotate(7deg);
+  max-width: 560px;
+  min-width: 320px;
+  padding-right: 2em;
+  transform: rotate(-4deg);
+  filter: drop-shadow(0 18px 22px rgba(0, 0, 0, 0.45));
 }
 .header__arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #858383;
+  color: #9e9e9e;
   font-size: 2rem;
 }
 .header__arrow-left {
@@ -284,9 +285,7 @@ body {
   margin-bottom: 5em;
   background-color: #1a1a1a;
 }
-.collection__tracks,
-.collection__teams,
-.collection__drivers {
+.collection__tracks, .collection__teams, .collection__drivers {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -295,9 +294,8 @@ body {
   max-width: 350px;
   padding: 1em 0;
 }
-.collection__tracks,
-.collection__drivers {
-  background-color: #5e1943;
+.collection__tracks, .collection__drivers {
+  background-color: #2d2d2d;
 }
 .collection__heading {
   font-family: "Oswald", sans-serif;
@@ -320,7 +318,6 @@ body {
 .collection__img {
   width: 350px;
   height: 250px;
-  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -330,6 +327,12 @@ body {
   justify-content: center;
   align-items: center;
   padding: 3em 0;
+  /*
+    Karuzela trzyma kolejne slajdy poza widokiem po prawej (na telefonie siegaly
+    x = 2114px przy oknie szerokim na 390px). Bez przyciecia caly dokument
+    dostawal poziomy pasek przewijania.
+  */
+  overflow: hidden;
 }
 .slider__heading {
   text-align: center;
@@ -353,7 +356,7 @@ body {
   margin-bottom: 1em;
 }
 .slider__content {
-  background-color: #d5e6eb;
+  background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -361,14 +364,13 @@ body {
 .slider__img {
   padding: 4em 0 2em;
   width: 100%;
-  max-height: 500px;
 }
 .slider__details {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #d5e6eb;
+  background-color: #f5f5f5;
 }
 .slider__title {
   text-transform: uppercase;
@@ -383,11 +385,10 @@ body {
   text-align: center;
   text-transform: capitalize;
   transition: 0.4s;
-  background-color: #181818;
+  background-color: #1a1a1a;
   color: #ffffff;
 }
-.slider__left,
-.slider__right {
+.slider__left, .slider__right {
   visibility: hidden;
 }
 
@@ -395,145 +396,104 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2em;
+  gap: 1em;
   padding: 5em 0;
   background-color: #f5f5f5;
 }
-
 .cars__heading {
   text-transform: capitalize;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "Oswald", sans-serif;
-  margin-bottom: 1em;
 }
-
 .cars__search-input {
   max-width: 300px;
   width: 100%;
-  height: 40px;
+  height: 0;
   padding-left: 0.5em;
   border: none;
+  opacity: 0;
+  transition: height 0.3s, opacity 0.3s, box-shadow 0.3s;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s;
 }
-
 .cars__search-input:focus {
   outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
-
+.cars__search-active {
+  height: 40px;
+  opacity: 1;
+}
 .cars__body {
   display: flex;
   align-items: center;
-  gap: 1em;
-  margin-bottom: 2em;
+  gap: 0.5em;
+  margin-bottom: 1em;
 }
-
 .cars__filter-btn {
-  padding: 0.7em 2em;
+  padding: 0.5em 1em;
   border-radius: 10px;
   color: #000;
-  background-color: #d0dadd;
-  font-size: 1.4rem;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
+  background-color: #e0e0e0;
 }
-
-.cars__filter-btn:hover {
-  background-color: #252525;
-  color: #ffffff;
-}
-
 .cars__active {
-  background-color: #252525;
+  background-color: #1a1a1a;
   color: #ffffff;
 }
-
 .cars__products {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 2em;
+  flex-wrap: wrap;
 }
-
 .cars__box {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 300px;
   height: 400px;
-  background-color: #f7f4f4;
-  box-shadow:
-    0 3px 6px rgba(0, 0, 0, 0.16),
-    0 3px 6px rgba(0, 0, 0, 0.23);
-  border-radius: 10px;
-  overflow: hidden;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  object-fit: cover;
+  background-color: #ffffff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  color: #000;
 }
-
-.cars__box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
 .cars__img-box {
   height: 200px;
-  width: 100%;
-  overflow: hidden;
+  width: 327px;
 }
-
 .cars__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 1em;
+  transition: 0.4s;
+  transform: rotate(-25deg);
 }
-
-.cars__box:hover .cars__img {
-  transform: scale(1.05);
-}
-
 .cars__title {
   width: 100%;
-  padding: 1em 0;
-  border-top: 1px solid rgb(197, 188, 188);
+  padding-top: 0.5em;
+  border-top: 1px solid #e0e0e0;
   text-align: center;
   font-size: 2rem;
   font-family: "Oswald", sans-serif;
 }
-
 .cars__price {
+  margin-bottom: 1em;
   font-size: 1.8rem;
   font-weight: 600;
-  color: rgb(29, 29, 29);
-  margin-bottom: 1em;
+  color: #1a1a1a;
 }
-
 .cars__buttons {
   display: flex;
-  gap: 0.5em;
-  margin-top: auto;
-  margin-bottom: 10px;
+  gap: 0.3em;
 }
-
 .cars__btn {
+  position: relative;
   padding: 0.7em 1.8em;
   text-transform: capitalize;
   border-radius: 5px;
   color: #ffffff;
-  background-color: #252525;
-  font-size: 1.2rem;
-  transition:
-    background-color 0.3s ease,
-    transform 0.3s ease;
-}
-
-.cars__btn:hover {
-  background-color: #000;
-  transform: translateY(-2px);
+  background-color: #1a1a1a;
 }
 @keyframes fade {
   from {
@@ -582,7 +542,7 @@ body {
   flex-direction: column;
   height: 100%;
   padding-bottom: 2em;
-  background-color: #f7f4f4;
+  background-color: #ffffff;
 }
 .product__box {
   position: relative;
@@ -614,18 +574,17 @@ body {
   width: 60%;
   height: 1px;
   border: none;
-  background-color: #b1adad;
+  background-color: #bdbdbd;
 }
 .product__text-span {
   color: grey;
 }
 .product__button {
-  width: -moz-fit-content;
   width: fit-content;
   padding: 0.6em 1.7em;
   border-radius: 5px;
   color: #ffffff;
-  background-color: #222424;
+  background-color: #1a1a1a;
 }
 .product__close {
   position: absolute;
@@ -636,10 +595,10 @@ body {
 .product__view-more {
   margin-top: 2em;
   padding: 0.6em 1.8em;
-  color: rgb(10, 10, 10);
+  color: #000000;
   border-radius: 20px;
   background-color: transparent;
-  border: 1px solid rgb(29, 29, 29);
+  border: 1px solid #000000;
   font-size: 1.6rem;
 }
 
@@ -686,7 +645,7 @@ body {
 .offer__btn {
   display: block;
   padding: 0.7em 1.7em;
-  background-color: #bb9b32;
+  background-color: #e10600;
   border-radius: 20px;
   color: #ffffff;
 }
@@ -730,7 +689,6 @@ body {
 .service__img {
   width: 70px;
   height: 70px;
-  -o-object-fit: cover;
   object-fit: cover;
 }
 .service__title {
@@ -746,7 +704,7 @@ body {
 
 .contact {
   padding: 3em 0;
-  background-color: rgb(27, 27, 27);
+  background-color: #1a1a1a;
 }
 .contact__body {
   display: flex;
@@ -786,8 +744,8 @@ body {
   align-items: center;
   width: 220px;
   padding: 2em 0;
-  border-bottom: 1px solid rgb(59, 59, 59);
-  border-top: 1px solid rgb(59, 59, 59);
+  border-bottom: 1px solid #616161;
+  border-top: 1px solid #616161;
 }
 .contact__media-title {
   margin-bottom: 0.5em;
@@ -819,16 +777,15 @@ body {
   margin-right: 0.5em;
   font-size: 1.6rem;
 }
-.contact__message-mail,
-.contact__message-tel {
+.contact__message-mail, .contact__message-tel {
   display: none;
-  color: #ca9635;
+  color: #e10600;
   font-size: 1.4rem;
 }
 
 .footer {
   padding: 1.5em 0;
-  background-color: #111;
+  background-color: #0d0d0d;
   color: #ffffff;
   text-align: center;
 }
@@ -840,7 +797,7 @@ body {
   bottom: 0;
   width: 100%;
   padding: 2em 0;
-  background-color: rgb(37, 37, 37);
+  background-color: #2d2d2d;
   color: #ffffff;
   z-index: 9;
   opacity: 0;
@@ -869,7 +826,6 @@ body {
   font-size: 1.4rem;
 }
 .cookie__btn {
-  width: -moz-fit-content;
   width: fit-content;
   padding: 0.7em 1.7em;
   font-size: 1.5rem;
@@ -938,7 +894,7 @@ ul {
     justify-content: center;
     align-items: center;
     gap: 0.2em;
-    color: rgb(253, 253, 253);
+    color: #ffffff;
     font-size: 2.5rem;
   }
   .nav__logo-img {
@@ -957,7 +913,7 @@ ul {
     transition: color 0.3s ease;
   }
   .nav__link:hover {
-    color: #5e1943;
+    color: #e10600;
   }
   .nav__basket {
     font-size: 2.5rem;
@@ -1001,12 +957,7 @@ ul {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.4),
-      transparent
-    );
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
     transition: none;
   }
   .header__btn:hover:after {
@@ -1018,7 +969,7 @@ ul {
     transition: 0.6s;
   }
   .header__arrow:hover {
-    color: #f9fafa;
+    color: #ffffff;
   }
   .header__arrow-left {
     margin-left: 0.6em;
@@ -1030,11 +981,6 @@ ul {
     flex-direction: row;
     gap: 1em;
   }
-  .collection__btn {
-    position: relative;
-    transition: 0.4s;
-    overflow: hidden;
-  }
   .collection__btn:after {
     content: "";
     position: absolute;
@@ -1042,17 +988,17 @@ ul {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.4),
-      transparent
-    );
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
     transition: none;
   }
   .collection__btn:hover:after {
     left: 100%;
     transition: 0.8s;
+  }
+  .collection__btn {
+    position: relative;
+    transition: 0.4s;
+    overflow: hidden;
   }
   .slider {
     padding: 4em 0;
@@ -1075,8 +1021,7 @@ ul {
   .slider__btn:hover {
     background-color: #2d2d2d;
   }
-  .slider__left,
-  .slider__right {
+  .slider__left, .slider__right {
     visibility: visible;
     font-size: 2rem;
     padding-right: 0.7em;
@@ -1111,20 +1056,12 @@ ul {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.4),
-      transparent
-    );
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
     transition: none;
   }
   .cars__btn-view:hover:after {
     left: 100%;
     transition: 0.8s;
-  }
-  .cars__btn {
-    overflow: hidden;
   }
   .cars__btn:after {
     content: "";
@@ -1133,17 +1070,15 @@ ul {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.4),
-      transparent
-    );
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
     transition: none;
   }
   .cars__btn:hover:after {
     left: 100%;
     transition: 0.8s;
+  }
+  .cars__btn {
+    overflow: hidden;
   }
   @keyframes fadeInAndScale {
     0% {
@@ -1180,7 +1115,7 @@ ul {
     transition: background-color 0.3s ease;
   }
   .offer__btn:hover {
-    background-color: #ac7d26;
+    background-color: #c62828;
   }
   .service {
     padding: 5em 0;
@@ -1199,14 +1134,12 @@ ul {
     justify-content: space-between;
     align-items: start;
   }
-  .contact__content-icons,
-  .contact__media-icon {
+  .contact__content-icons, .contact__media-icon {
     cursor: pointer;
     transition: color 0.3s ease;
   }
-  .contact__content-icons:hover,
-  .contact__media-icon:hover {
-    color: #5e1943;
+  .contact__content-icons:hover, .contact__media-icon:hover {
+    color: #e10600;
   }
   .contact__content-title {
     text-align: start;
@@ -1238,16 +1171,14 @@ ul {
     padding: 0.2em;
     top: 10px;
     z-index: 9;
-    color: rgb(150, 147, 147);
+    color: #9e9e9e;
   }
   .product__img {
     padding: unset;
   }
   .product__close {
     cursor: pointer;
-    transition:
-      background-color 0.3s ease,
-      color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   .product__close:hover {
     background-color: #000000;
@@ -1256,7 +1187,6 @@ ul {
   .product__button {
     position: relative;
     overflow: hidden;
-    cursor: pointer;
   }
   .product__button:after {
     content: "";
@@ -1265,27 +1195,22 @@ ul {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.4),
-      transparent
-    );
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
     transition: none;
   }
   .product__button:hover:after {
     left: 100%;
     transition: 0.8s;
   }
+  .product__button {
+    cursor: pointer;
+  }
   .product__view-more {
-    transition:
-      background-color 0.3s ease,
-      color 0.3s ease,
-      border 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
   }
   .product__view-more:hover {
-    background-color: #104d52;
-    color: #f9fafa;
+    background-color: #1a1a1a;
+    color: #ffffff;
     border: 1px solid transparent;
   }
   .product__zoom {
@@ -1293,9 +1218,7 @@ ul {
     transform: scale(2);
   }
   .cookie__btn {
-    transition:
-      background-color 0.3s ease,
-      color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   .cookie__btn:hover {
     background-color: #ffffff;
@@ -1322,70 +1245,31 @@ ul {
   .offer__img {
     max-width: 500px;
   }
-} /*# sourceMappingURL=main.css.map */
-
-/* -------------------------------------------------------------------------
-   Accessibility (WCAG 2.1 AA)
-   ------------------------------------------------------------------------- */
-
-/* Skip link: hidden until keyboard focus, then pinned to the top. */
-.skip-link {
-  position: absolute;
-  top: -100px;
-  left: 16px;
-  z-index: 2000;
-  padding: 12px 20px;
-  border-radius: 0 0 8px 8px;
-  background-color: #111;
-  color: #e10600;
-  font-weight: 600;
-  text-decoration: none;
-  border: 2px solid #e10600;
-  transition: top 0.2s ease-in-out;
 }
 
-.skip-link:focus,
-.skip-link:focus-visible {
-  top: 0;
-  outline: 3px solid #e10600;
-  outline-offset: 2px;
-}
+/*
+  Bolid na waskich ekranach.
 
-/* Available to assistive technology and to crawlers, but not shown. */
-.visually-hidden {
-  position: absolute !important;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-/* Target of the skip link, not a tab stop of its own. */
-#main-content:focus {
-  outline: none;
-}
-
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
-  outline: 3px solid #e10600;
-  outline-offset: 3px;
-  border-radius: 4px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+  `min-width: 320px` plus wewnetrzny odstep sprawialy, ze na telefonie obrazek
+  byl szerszy niz okno i strona dostawala poziomy pasek przewijania. Na malym
+  ekranie rezygnujemy z minimalnej szerokosci — auto ma sie zmiescic, a nie
+  trzymac rozmiar.
+*/
+@media (max-width: 640px) {
+  .header__cars {
+    min-width: 0;
+    max-width: 100%;
+    padding-right: 0;
   }
+}
+
+/*
+  Poziome przewijanie dokumentu.
+
+  Wysuwany koszyk (`.basket`) i kolejne slajdy karuzeli stoja celowo poza
+  prawa krawedzia okna. Bez przyciecia caly dokument dawal sie przewijac
+  w bok — na telefonie o 49px.
+*/
+html {
+  overflow-x: hidden;
 }
