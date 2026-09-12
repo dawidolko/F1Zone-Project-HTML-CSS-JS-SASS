@@ -1,130 +1,99 @@
-# F1-Website-Design 
+# F1 Zone
 
-> 🚀 **Modern Formula 1 Poster Shop** - Build responsive frontend websites with HTML5, JavaScript, and SCSS
+> 🏎️ **A poster shop without a framework** — plain HTML, SCSS and vanilla JavaScript, with a cart that persists in the browser
 
-## 📋 Description
+**F1 Zone** sells Formula 1 posters: tracks, cars and drivers. The catalogue lives in a JavaScript data file, a modal opens any poster full size, and the cart keeps its contents in `localStorage`, so closing the tab does not empty it.
 
-Welcome to the **F1-Website-Design** repository! This project showcases a modern and fully responsive frontend website for showcasing and selling premium Formula 1 posters. The focus is on delivering high performance, aesthetic design, and smooth user experience across all devices using cutting-edge frontend technologies.
+There is no framework and no build step beyond compiling SCSS. Every behaviour — the modal, the cart, the totals in the navigation, the "already in your cart" message — is a few dozen lines of vanilla JavaScript, which is the point of the exercise.
 
-This repository demonstrates best practices in modern web development, featuring responsive design, interactive JavaScript functionality, and organized SCSS architecture for maintainable styling solutions.
+![HTML5](https://img.shields.io/badge/HTML5-semantic-E34F26?logo=html5&logoColor=white)
+![Sass](https://img.shields.io/badge/Sass-SCSS-CC6699?logo=sass&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-vanilla-F7DF1E?logo=javascript&logoColor=black)
+![WebP](https://img.shields.io/badge/Images-WebP%20%2B%20fallback-0A84FF)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-## 📁 Repository Structure
+**Live:** [f1.dawidolko.pl](https://f1.dawidolko.pl)
 
-```
-F1-Website-Design/
-├── 📄 index.html     # Main entry page and application structure
-├── 🎨 css/           # Compiled CSS files for production
-├── ⚙️ scss/          # SCSS/SASS source files for styling
-├── 💻 js/            # JavaScript scripts and interactive functionality
-├── 🖼️ img/           # Images, graphics, and product assets
-└── 📖 README.md      # Project documentation
-```
+---
+
+## 🎯 Key Features
+
+- **A cart that survives the tab** — items are mirrored into `localStorage` on every change, with quantity, unit price and a running total recomputed on load.
+- **Duplicate protection with feedback** — adding something already in the basket shows a message instead of silently doing nothing or adding it twice.
+- **The catalogue is data** — `js/data.js` holds every poster with its id, price, stock, category, brand, code and alt text. Adding a product means adding an object.
+- **A product modal built by hand** — `js/modal.js` renders the detail view from the same data, so the listing and the modal can never disagree.
+- **Live totals in the navigation** — quantity and value update in the header as the cart changes, without a page reload.
+- **WebP with a fallback** — every photograph ships as both `.webp` and `.jpg`, so modern browsers get the smaller file and older ones still get an image.
+- **SCSS split by concern** — colours, sizes, mixins, reset and one partial per breakpoint, compiled into a single stylesheet.
+- **Alt text written per product** — it lives in the data file next to the image path, so it cannot be forgotten when a poster is added.
+
+---
+
+## 🛠️ Technology Stack
+
+| Technology      | Role                                                          |
+| --------------- | ------------------------------------------------------------- |
+| **HTML5**       | Semantic markup across the two pages.                         |
+| **SCSS**        | Variables, mixins and per-breakpoint partials.                |
+| **JavaScript**  | Cart, modal, totals and rendering — no framework.             |
+| **localStorage**| Cart persistence between visits.                              |
+| **Font Awesome**| Icon set.                                                     |
+
+---
 
 ## 🚀 Getting Started
 
-### 1. Clone the Repository
+### Prerequisites
+
+- Any static web server (or just a browser)
+- Sass, if you intend to change the styles
+
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/dawidolko/F1-Website-Design.git
-cd F1-Website-Design
+git clone https://github.com/dawidolko/F1Zone-Project-HTML-CSS-JS-SASS.git
+cd F1Zone-Project-HTML-CSS-JS-SASS
 ```
 
-### 2. Basic Setup (Static Version)
-
-- Open the `index.html` file directly in your browser
-- All styles and scripts are ready to use immediately
-
-### 3. Advanced Setup (With Build Tools)
-
-For development with SCSS compilation and optimization:
+### 2. Open it
 
 ```bash
-npm install
-npm start
+open index.html          # or serve the directory
+python3 -m http.server   # http://localhost:8000
 ```
 
-## ⚙️ System Requirements
+### 3. Work on the styles
 
-### **Essential Tools:**
+```bash
+sass --watch sass/main.scss css/style.css
+```
 
-- **Modern Web Browser** (Chrome, Firefox, Safari, Edge)
-- **Code Editor** (VS Code, Sublime Text, WebStorm)
-- **Git** for version control
+---
 
-### **Development Environment (Optional):**
+## 📁 Project Structure
 
-- **Node.js & npm** for package management
-- **Sass/SCSS compiler** for style preprocessing
-- **Webpack** for build optimization and asset bundling
-- **Live Server** extension for real-time development
+```
+F1Zone-Project-HTML-CSS-JS-SASS/
+├── index.html          # catalogue
+├── cart.html           # basket and totals
+├── js/
+│   ├── data.js         # every poster: price, stock, category, image, alt
+│   ├── main.js         # rendering and filters
+│   ├── modal.js        # the product detail view
+│   ├── cart.js         # cart state, localStorage, totals
+│   └── footer.js
+├── sass/
+│   ├── main.scss       # entry point
+│   ├── _colors.scss  _sizes.scss  _mixins.scss  _reset.scss
+│   ├── _medium.scss  _large.scss   # breakpoints
+│   └── cart/           # basket-specific styles
+├── css/                # compiled stylesheet
+├── img/                # posters and backgrounds, WebP + JPG
+└── robots.txt
+```
 
-### **Recommended Extensions:**
-
-- **Sass/SCSS** syntax highlighting
-- **Live Sass Compiler** for automatic compilation
-- **Prettier** for code formatting
-- **ESLint** for JavaScript code quality
-
-## ✨ Key Features
-
-### **🏪 Product Catalog**
-
-- Premium F1 posters featuring famous drivers, teams, and legendary race tracks
-- Detailed product descriptions with pricing and high-quality imagery
-
-### **📱 Responsive Design**
-
-- Fully optimized for mobile phones, tablets, and desktop devices
-- Modern CSS Grid and Flexbox layouts
-
-### **⚡ Dynamic Frontend**
-
-- Interactive product search and category filtering
-- Smooth animations and transitions for enhanced user experience
-
-### **🎨 Modern UI/UX**
-
-- Modular SCSS/SASS architecture for maintainable styling
-- Professional design following current web design trends
-
-### **🚀 Performance Optimized**
-
-- Fast loading times and smooth navigation
-- Optimized images and efficient asset delivery
-
-## 🛠️ Technologies Used
-
-- **HTML5** - Semantic markup and modern web standards
-- **CSS3/SCSS/SASS** - Advanced styling and responsiveness
-- **JavaScript** - Interactive functionality and DOM manipulation
-- **Webpack** - Module bundling and build optimization
-- **Git** - Version control and collaboration
-
-## 🌍 Live Demo
-
-The project is deployed and available at: **[https://f1.dawidolko.pl](https://f1.dawidolko.pl)**
-
-## 🖼️ Preview
-
-[<img src="img/f1.dawidolko.pl_.png" width="80%" alt="F1 Website Preview"/>](img/f1.dawidolko.pl_.png)
-
-## 🤝 Contributing
-
-Contributions are highly welcomed! Here's how you can help:
-
-- 🐛 **Report bugs** - Found an issue? Let us know!
-- 💡 **Suggest improvements** - Have ideas for better features?
-- 🔧 **Submit pull requests** - Share your enhancements and solutions
-- 📖 **Improve documentation** - Help make the project clearer
-
-Feel free to open issues or reach out through GitHub for any questions or suggestions.
-
-## 👨‍💻 Author
-
-Created by **Dawid Olko** - Part of the ongoing Formula 1 web development series.
+---
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
-
----
+MIT © [Dawid Olko](https://dawidolko.pl)
