@@ -27,8 +27,8 @@ function showMenuItems(item) {
     <p class="product__text">Availability: <span class="product__text-span">${item.instock}</span></p>
       </div>
       <hr class="product__hr">
-      <div class="product__button" onclick='addToCart(${item.id})'>Add To Cart</div>
-			<i class="product__close fa-solid fa-x"></i>
+      <button class="product__button" type="button" onclick='addToCart(${item.id})'>Add To Cart</button>
+			<button class="product__close fa-solid fa-x" type="button" aria-label="Close product preview"></button>
     </div>
     </div>
   `;

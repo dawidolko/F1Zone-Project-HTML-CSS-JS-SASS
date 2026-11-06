@@ -1,0 +1,189 @@
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("../fonts/oswald-300-700-normal-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("../fonts/roboto-300-700-normal-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("../fonts/roboto-300-700-normal-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fonts/fa-solid-900.woff2") format("woff2");
+}
+.fa,
+.fas,
+.fa-solid {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/fa-regular-400.woff2") format("woff2");
+}
+.far,
+.fa-regular {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Font Awesome 6 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/fa-brands-400.woff2") format("woff2");
+}
+.fab,
+.fa-brands {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+.fa,
+.fas,
+.far,
+.fab,
+.fa-solid,
+.fa-regular,
+.fa-brands {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.fa-arrow-left::before {
+  content: "\f060";
+}
+.fa-arrow-right::before {
+  content: "\f061";
+}
+.fa-bars::before {
+  content: "\f0c9";
+}
+.fa-basket-shopping::before {
+  content: "\f291";
+}
+.fa-cart-shopping::before {
+  content: "\f07a";
+}
+.fa-chevron-left::before {
+  content: "\f053";
+}
+.fa-chevron-right::before {
+  content: "\f054";
+}
+.fa-clock::before {
+  content: "\f017";
+}
+.fa-envelope::before {
+  content: "\f0e0";
+}
+.fa-eye::before {
+  content: "\f06e";
+}
+.fa-facebook::before {
+  content: "\f09a";
+}
+.fa-instagram::before {
+  content: "\f16d";
+}
+.fa-location-dot::before {
+  content: "\f3c5";
+}
+.fa-magnifying-glass::before {
+  content: "\f002";
+}
+.fa-minus::before {
+  content: "\f068";
+}
+.fa-phone::before {
+  content: "\f095";
+}
+.fa-plus::before {
+  content: "\2b";
+}
+.fa-x::before {
+  content: "\58";
+}
+.fa-x-twitter::before {
+  content: "\e61b";
+}
+.fa-xmark::before {
+  content: "\f00d";
+}
+
+:where(button.nav__menu, button.header__arrow, button.slider__left, button.slider__right, button.cars__search-icon, button.product__close, button.cart__minus, button.cart__plus) {
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button.nav__menu {
+  padding: 0;
+  font: inherit;
+}
+
+.nav__basket .nav__quantity {
+  font-family: "Roboto", sans-serif;
+}
+
+.header__cars {
+  height: auto;
+}
+
+.cars__body {
+  flex-wrap: wrap;
+}
+
+button.cars__search-icon {
+  padding: 0.3em;
+}
+
+.nav__open,
+.nav__close {
+  display: block;
+}
+
+.nav__hide {
+  display: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #ffd60a;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

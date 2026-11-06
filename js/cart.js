@@ -58,17 +58,17 @@ function renderList() {
 		cartBody.innerHTML += `
 		<tr class="cart__table-content">
 		<td class="cart__table-img">
-				<img src="${item.img}" alt="Product Preview">
+				<img src="${item.img.replace(/\.webp$/, "-540.webp")}" alt="${item.alt}" loading="lazy">
 		</td>
 		<td>${item.title}</td>
 		<td class="cart__quantity">
-		<i class="cart__minus fa-solid fa-minus"  onclick='changeNumberOfUnits("minus", ${
+		<button class="cart__minus fa-solid fa-minus" type="button" aria-label="Decrease quantity of ${item.title}" onclick='changeNumberOfUnits("minus", ${
 			item.id
-		})' ></i>
+		})' ></button>
 		<span class="cart__total">${item.numberOfUnits}</span>
-		<i class="cart__plus fa-solid fa-plus"  onclick='changeNumberOfUnits("plus", ${
+		<button class="cart__plus fa-solid fa-plus" type="button" aria-label="Increase quantity of ${item.title}" onclick='changeNumberOfUnits("plus", ${
 			item.id
-		})' ></i>
+		})' ></button>
 		</td>
 		<td>$${(item.price * item.numberOfUnits).toFixed(2)}</td>
 </tr>

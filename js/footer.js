@@ -8,6 +8,7 @@ const openNav = () => {
 	navOpen.classList.toggle("nav__hide");
 	navClose.classList.toggle("nav__hide");
 	navLinks.classList.toggle("nav__links-active");
+	navMenu.setAttribute("aria-expanded", navLinks.classList.contains("nav__links-active"));
 };
 navMenu.addEventListener("click", openNav);
 
@@ -16,6 +17,7 @@ navLink.forEach((link) => {
 		navLinks.classList.toggle("nav__links-active");
 		navOpen.classList.toggle("nav__hide");
 		navClose.classList.toggle("nav__hide");
+		navMenu.setAttribute("aria-expanded", navLinks.classList.contains("nav__links-active"));
 	});
 });
 

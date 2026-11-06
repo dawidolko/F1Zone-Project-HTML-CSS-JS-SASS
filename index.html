@@ -3,59 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Explore our exclusive collection of F1 merchandise, including team apparel, collectible items, and racing accessories. Whether you're a fan of Red Bull, Ferrari, or Mercedes, find top-quality products that bring the thrill of Formula 1 closer to you. Shop now for official F1 gear and unique memorabilia!" />
-    <meta
-      name="keywords"
-      content="F1 merchandise, Formula 1 gear, racing collectibles, team apparel, F1 accessories, Red Bull, Ferrari, Mercedes" />
-    <meta name="author" content="Dawid Olko" />
-    <meta name="copyright" content="Dawid Olko" />
-    <meta name="theme-color" content="#e10600" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" type="image/png" href="./logo.png" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap"
-      rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-      rel="stylesheet" />
-    <title>F1Zone</title>
-    <link rel="preload" href="css/main.css" as="style" />
-    <link rel="stylesheet" href="css/main.css" />
-    <script
-      src="https://kit.fontawesome.com/fdc09ecfc9.js"
-      crossorigin="anonymous"
-      async></script>
-  
-    <!-- Canonical URL: the authoritative address for this page. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src &#x27;self&#x27;; img-src &#x27;self&#x27; data:; style-src &#x27;self&#x27; &#x27;unsafe-inline&#x27;; script-src &#x27;self&#x27; &#x27;unsafe-inline&#x27;; font-src &#x27;self&#x27;; connect-src &#x27;self&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;self&#x27;; form-action &#x27;self&#x27;" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>F1Zone | Formula 1 Posters of Drivers, Teams and Tracks</title>
+    <meta name="description" content="F1Zone is a demo Formula 1 poster shop with driver, team and track art, a working cart and search. Built with HTML, SASS and JavaScript." />
     <link rel="canonical" href="https://f1.dawidolko.pl/" />
-
-    <!-- Open Graph / Twitter: controls how the page renders when shared. -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://f1.dawidolko.pl/" />
-    <meta property="og:title" content="F1Zone — Formula 1 Poster Shop" />
-    <meta property="og:description" content="Formula 1 poster shop with driver, team and track posters. Built with HTML, SASS and JavaScript." />
     <meta property="og:site_name" content="F1Zone" />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="F1Zone | Formula 1 Posters of Drivers, Teams and Tracks" />
+    <meta property="og:description" content="F1Zone is a demo Formula 1 poster shop with driver, team and track art, a working cart and search. Built with HTML, SASS and JavaScript." />
+    <meta property="og:url" content="https://f1.dawidolko.pl/" />
+    <meta property="og:image" content="https://f1.dawidolko.pl/img/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="F1Zone preview" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="F1Zone — Formula 1 Poster Shop" />
-    <meta name="twitter:description" content="Formula 1 poster shop with driver, team and track posters." />
-
-    <!-- Structured data: lets search engines describe the store in results. -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Store",
-        "name": "F1Zone",
-        "url": "https://f1.dawidolko.pl",
-        "description": "Formula 1 poster shop with driver, team and track posters.",
-        "author": { "@type": "Person", "name": "Dawid Olko", "url": "https://dawidolko.pl" }
-      }
-    </script>
+    <meta name="twitter:title" content="F1Zone | Formula 1 Posters of Drivers, Teams and Tracks" />
+    <meta name="twitter:description" content="F1Zone is a demo Formula 1 poster shop with driver, team and track art, a working cart and search. Built with HTML, SASS and JavaScript." />
+    <meta name="twitter:image" content="https://f1.dawidolko.pl/img/og-image.jpg" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"F1Zone","url":"https://f1.dawidolko.pl/","description":"Demo Formula 1 poster shop with driver, team and track posters.","inLanguage":"en","author":{"@type":"Person","name":"Dawid Olko","jobTitle":"Fullstack / AI Developer","url":"https://dawidolko.pl/"}}</script>
+<meta name="author" content="Dawid Olko" />
+    <meta name="copyright" content="Dawid Olko" />
+    <meta name="theme-color" content="#e10600" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="preload" href="fonts/oswald-300-700-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="css/main.css" as="style" />
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  
     <script src="/a11y/a11y-panel.js" data-accent="#c50500" defer></script>
   </head>
   <body>
@@ -63,16 +39,14 @@
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <nav class="nav">
       <div class="nav__body container">
-        <div class="nav__menu">
-          <div class="nav__open"><i class="fa-solid fa-bars"></i></div>
-          <div class="nav__close nav__hide">
-            <i class="fa-solid fa-xmark"></i>
-          </div>
-        </div>
-        <a href="#">
+        <button class="nav__menu" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="nav__open"><i class="fa-solid fa-bars" aria-hidden="true"></i></span>
+          <span class="nav__close nav__hide"><i class="fa-solid fa-xmark" aria-hidden="true"></i></span>
+        </button>
+        <a href="#" aria-label="F1Zone home">
           <div class="nav__logo">
             <img
-              src="img/logo.png"
+              src="img/logo-120.webp"
               class="nav__logo-img"
               alt="logo image"
               width="50"
@@ -87,7 +61,7 @@
         </div>
         <div class="nav__items">
           <div class="nav__shop">
-            <a href="cart.html">
+            <a href="cart.html" aria-label="Shopping cart">
               <i class="nav__basket fa-solid fa-basket-shopping">
                 <span class="nav__quantity"></span>
               </i>
@@ -112,8 +86,24 @@
 
     <header class="header">
       <h1 class="visually-hidden">F1Zone — Formula 1 poster shop</h1>
-      <i class="header__arrow header__arrow-left fa-solid fa-chevron-left"></i>
-      <i class="header__arrow header__arrow-right fa-solid fa-chevron-right"></i>
+      <button class="header__arrow header__arrow-left fa-solid fa-chevron-left" type="button" aria-label="Previous slide"></button>
+      <button class="header__arrow header__arrow-right fa-solid fa-chevron-right" type="button" aria-label="Next slide"></button>
+      <div class="header__slide header__active">
+        <div class="header__img">
+          <div class="header__content move">
+            <p class="header__heading">New Summer</p>
+            <h2 class="header__text">Tracks Collection</h2>
+            <a class="header__btn" href="#cars_id">SHOP NOW</a>
+          </div>
+          <img
+            class="header__cars"
+            src="img/f1-car.svg"
+            alt="F1 racing car in motion - tracks collection"
+            width="450"
+            height="150"
+            fetchpriority="high" />
+        </div>
+      </div>
     </header>
 
     <main id="main-content" tabindex="-1">
@@ -162,9 +152,9 @@
       <h2 class="slider__heading">Bestsellers Products</h2>
 
       <section class="slider">
-        <i class="slider__left fas fa-arrow-left"></i>
+        <button class="slider__left fas fa-arrow-left" type="button" aria-label="Scroll bestsellers left"></button>
         <div class="slider__gallery"></div>
-        <i class="slider__right fas fa-arrow-right"></i>
+        <button class="slider__right fas fa-arrow-right" type="button" aria-label="Scroll bestsellers right"></button>
       </section>
 
       <section class="cars" id="cars_id">
@@ -196,7 +186,7 @@
             data-category="drivers">
             Drivers
           </button>
-          <i class="cars__search-icon fa-solid fa-magnifying-glass"></i>
+          <button class="cars__search-icon fa-solid fa-magnifying-glass" type="button" aria-label="Toggle product search"></button>
         </div>
         <div class="product-section__products cars__products"></div>
         <button class="product__view-more"></button>
@@ -219,7 +209,7 @@
             <a href="#cars_id" class="offer__btn">SHOP NOW</a>
           </div>
           <img
-            src="img/logo.png"
+            src="img/logo-400.webp"
             alt="drivers collection posters"
             class="offer__img"
             loading="lazy"
@@ -275,10 +265,10 @@
       <section class="contact" id="contact">
         <div class="contact__body container">
           <div class="contact__logo">
-            <a href="#">
+            <a href="#" aria-label="F1Zone home">
               <div class="contact__logo-title">
                 <img
-                  src="img/logo.png"
+                  src="img/logo-120.webp"
                   class="contact__logo-img"
                   alt="logo image"
                   loading="lazy"
@@ -295,9 +285,9 @@
           <div class="contact__media">
             <p class="contact__media-title">follow us on__</p>
             <div>
-              <i class="contact__media-icon fa-brands fa-facebook"></i>
-              <i class="contact__media-icon fa-brands fa-instagram"></i>
-              <i class="contact__media-icon fa-brands fa-x-twitter"></i>
+              <i class="contact__media-icon fa-brands fa-facebook" aria-hidden="true"></i>
+              <i class="contact__media-icon fa-brands fa-instagram" aria-hidden="true"></i>
+              <i class="contact__media-icon fa-brands fa-x-twitter" aria-hidden="true"></i>
             </div>
           </div>
           <div class="contact__content">
@@ -305,7 +295,7 @@
             <a
               class="contact__content-icons"
               href="https://goo.gl/maps/1JDQsq28KFfbreKc8"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               ><i class="contact__content-icon fa-solid fa-location-dot"></i>94
               Rzeszów, Polska</a
             >
@@ -334,7 +324,7 @@
       </p>
     </footer>
 
-    <div class="cookie">
+    <aside class="cookie" aria-label="Cookie notice">
       <div class="cookie__box container">
         <p class="cookie__title">
           <span class="cookie__img">🍪</span> We use cookie filles
@@ -348,7 +338,7 @@
           <button class="cookie__btn">Accept</button>
         </div>
       </div>
-    </div>
+    </aside>
 
     <script src="js/footer.js" defer></script>
     <script src="js/data.js" defer></script>

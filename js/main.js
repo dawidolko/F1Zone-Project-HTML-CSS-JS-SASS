@@ -17,11 +17,12 @@ const headerItems = [
 ];
 
 const header = document.querySelector(".header");
+const thumbnail = (src) => src.replace(/\.webp$/, "-540.webp");
 let currentSlideIndex = 0;
 
 const renderHeader = () => {
-  headerItems.forEach((el) => {
-    header.innerHTML += `
+  headerItems.slice(1).forEach((el) => {
+    header.insertAdjacentHTML("beforeend", `
 		<div class="header__slide">
 				<div class="header__img">
 					<div class="header__content move">
@@ -29,10 +30,10 @@ const renderHeader = () => {
 						<h2 class="header__text">${el.text}</h2>
 						<a class="header__btn" href="#cars_id">SHOP NOW</a>
 					</div>
-					<img class="header__cars" src="${el.img}" alt="${el.alt}" />
+					<img class="header__cars" src="${el.img}" alt="${el.alt}" width="450" height="150" />
 				</div>
 			</div>
-	`;
+	`);
   });
 };
 
@@ -93,9 +94,12 @@ const renderSlider = () => {
 		<div class="slider__box">
 			<div class="slider__content">
 				<img
-					src="${slider.img}"
+					src="${thumbnail(slider.img)}"
 					alt="${slider.alt}"
 					class="slider__img"
+					loading="lazy"
+					width="540"
+					height="760"
 				/>
 				<div class="slider__details">
 					<h3 class="slider__title">${slider.title}</h3>
@@ -116,7 +120,7 @@ const renderProducts = () => {
     productsContainer.innerHTML += `
   <div class="cars__box ${product.visibility}" data-category="${product.category}">
 	<div class="cars__img-box">
-  <img class="cars__img" src="${product.img}" alt="${product.alt}">
+  <img class="cars__img" src="${thumbnail(product.img)}" alt="${product.alt}" loading="lazy" width="540" height="400">
 	</div>
   <h3 class="cars__title">${product.title}</h3>
   <p class="cars__price">$${product.price}</p>
