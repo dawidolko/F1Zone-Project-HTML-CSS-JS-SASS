@@ -84,11 +84,9 @@
             <tbody class="cart__table_tr"></tbody>
           </table>
           <div class="cart__box">
-            <a href="index.html#cars_id"
-              ><button class="cart__continue">
-                <i class="fa-solid fa-chevron-left"></i> Continue shopping
-              </button></a
-            >
+            <a class="cart__continue" href="index.html#cars_id">
+              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i> Continue shopping
+            </a>
             <p class="cart__total-price"></p>
           </div>
         </div>
@@ -102,7 +100,7 @@
           <label class="payment__label" for="payment-address">Address</label>
           <input
             id="payment-address"
-            autocomplete="street-address"
+            autocomplete="address-line1"
             type="text"
             placeholder="Elton St 21 22-145"
             class="payment__input" />

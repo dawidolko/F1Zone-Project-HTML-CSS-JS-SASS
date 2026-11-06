@@ -150,6 +150,14 @@ button.nav__menu {
   font-family: "Roboto", sans-serif;
 }
 
+.service__title {
+  font-size: 1em;
+}
+
+.cart__continue {
+  display: inline-block;
+}
+
 .header__cars {
   height: auto;
 }
