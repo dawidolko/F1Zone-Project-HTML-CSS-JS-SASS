@@ -51,6 +51,14 @@ The car was modelled in code rather than downloaded, which keeps the page free o
 
 ---
 
+## 🎬 Demo
+
+<p align="center">
+  <img src="docs/readme/demo.webp" alt="F1 Zone: a short scroll through the live site" width="80%">
+</p>
+
+---
+
 ## 🛠️ Technology Stack
 
 | Technology      | Role                                                          |
