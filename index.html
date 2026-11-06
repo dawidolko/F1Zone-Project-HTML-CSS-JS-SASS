@@ -5,29 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Security-Policy" content="default-src &#x27;self&#x27;; img-src &#x27;self&#x27; data:; style-src &#x27;self&#x27; &#x27;unsafe-inline&#x27;; script-src &#x27;self&#x27; &#x27;unsafe-inline&#x27;; font-src &#x27;self&#x27;; connect-src &#x27;self&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;self&#x27;; form-action &#x27;self&#x27;" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <title>F1Zone | Formula 1 Posters of Drivers, Teams and Tracks</title>
-    <meta name="description" content="F1Zone is a demo Formula 1 poster shop with driver, team and track art, a working cart and search. Built with HTML, SASS and JavaScript." />
+    <title>F1Zone | Demo Motorsport Poster Shop</title>
+    <meta name="description" content="F1Zone is an unofficial demo poster shop with invented race liveries, helmets and circuits, a working cart and search. Nothing here is for sale." />
     <link rel="canonical" href="https://f1.dawidolko.pl/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="F1Zone" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:title" content="F1Zone | Formula 1 Posters of Drivers, Teams and Tracks" />
-    <meta property="og:description" content="F1Zone is a demo Formula 1 poster shop with driver, team and track art, a working cart and search. Built with HTML, SASS and JavaScript." />
+    <meta property="og:title" content="F1Zone | Demo Motorsport Poster Shop" />
+    <meta property="og:description" content="F1Zone is an unofficial demo poster shop with invented race liveries, helmets and circuits, a working cart and search. Nothing here is for sale." />
     <meta property="og:url" content="https://f1.dawidolko.pl/" />
     <meta property="og:image" content="https://f1.dawidolko.pl/img/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="F1Zone preview" />
+    <meta property="og:image:alt" content="An invented graphite race car on a red studio floor, with the F1Zone wordmark" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="F1Zone | Formula 1 Posters of Drivers, Teams and Tracks" />
-    <meta name="twitter:description" content="F1Zone is a demo Formula 1 poster shop with driver, team and track art, a working cart and search. Built with HTML, SASS and JavaScript." />
+    <meta name="twitter:title" content="F1Zone | Demo Motorsport Poster Shop" />
+    <meta name="twitter:description" content="F1Zone is an unofficial demo poster shop with invented race liveries, helmets and circuits, a working cart and search. Nothing here is for sale." />
     <meta name="twitter:image" content="https://f1.dawidolko.pl/img/og-image.jpg" />
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"F1Zone","url":"https://f1.dawidolko.pl/","description":"Demo Formula 1 poster shop with driver, team and track posters.","inLanguage":"en","author":{"@type":"Person","name":"Dawid Olko","jobTitle":"Fullstack / AI Developer","url":"https://dawidolko.pl/"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"F1Zone","url":"https://f1.dawidolko.pl/","description":"Unofficial demo poster shop with invented race liveries, helmets and circuits.","inLanguage":"en","author":{"@type":"Person","name":"Dawid Olko","jobTitle":"Fullstack / AI Developer","url":"https://dawidolko.pl/"}}</script>
 <meta name="author" content="Dawid Olko" />
     <meta name="copyright" content="Dawid Olko" />
     <meta name="theme-color" content="#e10600" />
+    <link rel="icon" type="image/svg+xml" href="/img/brand/mark.svg" />
     <link rel="icon" type="image/png" href="/logo.png" />
     <link rel="preload" href="fonts/oswald-300-700-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" as="image" type="image/avif" media="(max-width: 700px)" imagesrcset="img/hero/hero-phone-780.avif 780w, img/hero/hero-phone-1170.avif 1170w" imagesizes="100vw" fetchpriority="high" />
+    <link rel="preload" as="image" type="image/avif" media="(min-width: 701px)" imagesrcset="img/hero/hero-1280.avif 1280w, img/hero/hero-1920.avif 1920w, img/hero/hero-2400.avif 2400w" imagesizes="100vw" fetchpriority="high" />
     <link rel="preload" href="css/main.css" as="style" />
     <link rel="stylesheet" href="css/site.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -46,12 +49,11 @@
         <a href="#" aria-label="F1Zone home">
           <div class="nav__logo">
             <img
-              src="img/logo-120.webp"
+              src="img/brand/wordmark.svg"
               class="nav__logo-img"
-              alt="logo image"
-              width="50"
-              height="50" />
-            <p>F1Zone</p>
+              alt=""
+              width="132"
+              height="29" />
           </div>
         </a>
         <div class="nav__links">
@@ -86,24 +88,24 @@
     </div>
 
     <header class="header">
-      <h1 class="visually-hidden">F1Zone — Formula 1 poster shop</h1>
-      <button class="header__arrow header__arrow-left fa-solid fa-chevron-left" type="button" aria-label="Previous slide"></button>
-      <button class="header__arrow header__arrow-right fa-solid fa-chevron-right" type="button" aria-label="Next slide"></button>
-      <div class="header__slide header__active">
-        <div class="header__img">
-          <div class="header__content move">
-            <p class="header__heading">New Summer</p>
-            <h2 class="header__text">Tracks Collection</h2>
-            <a class="header__btn" href="#cars_id">SHOP NOW</a>
-          </div>
-          <img
-            class="header__cars"
-            src="img/f1-car.svg"
-            alt="F1 racing car in motion - tracks collection"
-            width="450"
-            height="150"
-            fetchpriority="high" />
-        </div>
+      <picture class="header__media">
+        <source media="(max-width: 700px)" type="image/avif" srcset="img/hero/hero-phone-780.avif 780w, img/hero/hero-phone-1170.avif 1170w" sizes="100vw" />
+        <source media="(max-width: 700px)" type="image/webp" srcset="img/hero/hero-phone-780.webp 780w, img/hero/hero-phone-1170.webp 1170w" sizes="100vw" />
+        <source type="image/avif" srcset="img/hero/hero-1280.avif 1280w, img/hero/hero-1920.avif 1920w, img/hero/hero-2400.avif 2400w" sizes="100vw" />
+        <source type="image/webp" srcset="img/hero/hero-1280.webp 1280w, img/hero/hero-1920.webp 1920w, img/hero/hero-2400.webp 2400w" sizes="100vw" />
+        <img
+          class="header__img"
+          src="img/hero/hero-1920.webp"
+          alt="An invented graphite and red open-wheel race car on a glossy studio floor, lit against a deep red wall"
+          width="1920"
+          height="1080"
+          fetchpriority="high" />
+      </picture>
+      <div class="header__content container">
+        <h1 class="header__title">Race posters for your wall</h1>
+        <p class="header__text">Invented liveries, helmets and circuits, drawn for this shop.</p>
+        <a class="header__btn" href="#cars_id">Browse the posters</a>
+        <p class="header__note">Unofficial demo shop. Nothing here is for sale.</p>
       </div>
     </header>
 
@@ -113,8 +115,8 @@
           <h3 class="collection__heading">Tracks Collection</h3>
           <div class="collection__shadow">
             <img
-              src="img/tracks-collection.webp"
-              alt="tracks collection"
+              src="img/collections/tracks.webp"
+              alt="A red ribbon circuit on a dark studio floor"
               class="collection__img"
               loading="lazy"
               width="400"
@@ -123,11 +125,11 @@
           <a class="collection__btn" href="#cars_id">explore more</a>
         </div>
         <div class="collection__teams">
-          <h3 class="collection__heading">Teams Collection</h3>
+          <h3 class="collection__heading">Liveries Collection</h3>
           <div class="collection__shadow">
             <img
-              src="img/teams-collection.webp"
-              alt="teams collection"
+              src="img/collections/liveries.webp"
+              alt="Close view of an ivory and red race car front wheel"
               class="collection__img"
               loading="lazy"
               width="400"
@@ -136,11 +138,11 @@
           <a class="collection__btn" href="#cars_id">explore more</a>
         </div>
         <div class="collection__drivers">
-          <h3 class="collection__heading">Drivers Collection</h3>
+          <h3 class="collection__heading">Helmets Collection</h3>
           <div class="collection__shadow">
             <img
-              src="img/drivers-collection.webp"
-              alt="drivers collection"
+              src="img/collections/helmets.webp"
+              alt="A race helmet with a red chevron pattern"
               class="collection__img"
               loading="lazy"
               width="400"
@@ -179,13 +181,13 @@
           </button>
           <button
             class="cars__filter-btn cars__filter-mwk"
-            data-category="teams">
-            Teams
+            data-category="liveries">
+            Liveries
           </button>
           <button
             class="cars__filter-btn cars__filter-mwk"
-            data-category="drivers">
-            Drivers
+            data-category="helmets">
+            Helmets
           </button>
           <button class="cars__search-icon fa-solid fa-magnifying-glass" type="button" aria-label="Toggle product search"></button>
         </div>
@@ -204,18 +206,18 @@
             <p class="offer__title">UP TO 70% OFF</p>
             <p class="offer__text">
               Upgrade your space with our exclusive posters! Enjoy up to 70% off
-              on stunning F1-themed wall art and save big while transforming
+              on stunning race-themed wall art and save big while transforming
               your walls.
             </p>
             <a href="#cars_id" class="offer__btn">SHOP NOW</a>
           </div>
           <img
-            src="img/logo-400.webp"
-            alt="drivers collection posters"
+            src="img/collections/offer.webp"
+            alt="Rear view of an invented race car on a red studio floor"
             class="offer__img"
             loading="lazy"
-            width="200"
-            height="200" />
+            width="500"
+            height="500" />
         </div>
       </section>
 
@@ -223,9 +225,9 @@
         <div class="service__content container">
           <div class="service__box">
             <img
-              src="img/truck-delivery.webp"
-              alt="delivery truck icon"
-              class="service__img service__truck"
+              src="img/icons/delivery.svg"
+              alt=""
+              class="service__img"
               loading="lazy"
               width="80"
               height="80" />
@@ -236,8 +238,8 @@
           </div>
           <div class="service__box">
             <img
-              src="img/credit-card.webp"
-              alt="credit cart icon"
+              src="img/icons/card.svg"
+              alt=""
               class="service__img"
               loading="lazy"
               width="80"
@@ -249,8 +251,8 @@
           </div>
           <div class="service__box">
             <img
-              src="img/receipt-refund.webp"
-              alt="return arrow icon"
+              src="img/icons/returns.svg"
+              alt=""
               class="service__img service__return"
               loading="lazy"
               width="80"
@@ -269,17 +271,16 @@
             <a href="#" aria-label="F1Zone home">
               <div class="contact__logo-title">
                 <img
-                  src="img/logo-120.webp"
+                  src="img/brand/wordmark.svg"
                   class="contact__logo-img"
-                  alt="logo image"
+                  alt=""
                   loading="lazy"
-                  width="50"
-                  height="50" />
-                <p>F1Zone</p>
+                  width="164"
+                  height="36" />
               </div>
             </a>
             <p class="contact__logo-text">
-              Explore our diverse collection of F1 posters, designed to match
+              Explore our diverse collection of race posters, designed to match
               every style and passion for motorsport.
             </p>
           </div>
@@ -323,12 +324,17 @@
       <p class="footer__text">
         © <span class="footer__date"></span> F1Zone | All rights reserved.
       </p>
+      <p class="footer__note">
+        F1Zone is an unofficial study project and a demo shop that sells nothing. It is not connected with Formula 1, the FIA or any team, and their trademarks belong to their owners.
+        All cars, helmets, circuits and artwork here are invented and were made for this site.
+        <a class="footer__link" href="https://github.com/dawidolko/F1Zone-Project-HTML-CSS-JS-SASS/blob/main/CREDITS.md">Credits</a>
+      </p>
     </footer>
 
     <aside class="cookie" aria-label="Cookie notice">
       <div class="cookie__box container">
         <p class="cookie__title">
-          <span class="cookie__img">🍪</span> We use cookie filles
+          <span class="cookie__img">🍪</span> We use cookie files
         </p>
         <div class="cookie__content">
           <p class="cookie__text">

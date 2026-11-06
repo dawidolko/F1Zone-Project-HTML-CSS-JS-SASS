@@ -1,6 +1,6 @@
 # F1Zone
 
-> F1Zone is a demo Formula 1 poster shop with driver, team and track posters, search, filters and a browser-side cart, built with HTML, SASS and JavaScript.
+> F1Zone is an unofficial demo poster shop with invented race liveries, helmets and circuits, search, filters and a browser-side cart, built with HTML, CSS and JavaScript. Nothing here is for sale.
 
 ## Pages
 
@@ -9,3 +9,4 @@
 ## Source
 
 - [GitHub repository](https://github.com/dawidolko/F1Zone-Project-HTML-CSS-JS-SASS): Source code and setup notes for the project.
+- [Credits](https://github.com/dawidolko/F1Zone-Project-HTML-CSS-JS-SASS/blob/main/CREDITS.md): Assets, authors and licences.

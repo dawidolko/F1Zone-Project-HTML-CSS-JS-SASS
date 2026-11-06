@@ -52,59 +52,6 @@
     }
   }
 
-  .header {
-    &:hover .header__arrow {
-      opacity: 1;
-    }
-
-    &__img {
-      flex-direction: row;
-      gap: 0;
-    }
-
-    &__cars {
-      max-width: 600px;
-    }
-
-    &__content {
-      padding-left: 4em;
-      align-items: start;
-    }
-
-    &__heading {
-      text-align: left;
-      width: 300px;
-      font-size: 4.7rem;
-    }
-
-    &__text {
-      font-size: 4.5rem;
-    }
-
-    &__btn {
-      position: relative;
-      overflow: hidden;
-      @include glassHover;
-    }
-
-    &__arrow {
-      opacity: 0;
-      transition: 0.6s;
-
-      &:hover {
-        color: $white;
-      }
-    }
-
-    &__arrow-left {
-      margin-left: 0.6em;
-    }
-
-    &__arrow-right {
-      margin-right: 0.6em;
-    }
-  }
-
   .collection {
     flex-direction: row;
     gap: 1em;

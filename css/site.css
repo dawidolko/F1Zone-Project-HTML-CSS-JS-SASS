@@ -134,7 +134,7 @@
   content: "\f00d";
 }
 
-:where(button.nav__menu, button.header__arrow, button.slider__left, button.slider__right, button.cars__search-icon, button.product__close, button.cart__minus, button.cart__plus) {
+:where(button.nav__menu, button.slider__left, button.slider__right, button.cars__search-icon, button.product__close, button.cart__minus, button.cart__plus) {
   border: 0;
   background: none;
   color: inherit;
@@ -168,10 +168,6 @@ button.nav__menu {
 
 .cart__continue {
   display: inline-block;
-}
-
-.header__cars {
-  height: auto;
 }
 
 .slider__img {
@@ -210,4 +206,62 @@ input:focus-visible {
     transition: none !important;
     scroll-behavior: auto !important;
   }
+}
+
+.nav__logo-img {
+  width: 132px;
+  height: auto;
+}
+
+.contact__logo-img {
+  width: 164px;
+  height: auto;
+}
+
+.footer__text {
+  padding: 0 1em;
+}
+
+.footer__note {
+  max-width: 76ch;
+  margin: 0.8em auto 0;
+  padding: 0 1.25em;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #d4d4d4;
+}
+
+.footer__link {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.cart__demo {
+  padding: 0 1em;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #5c5c5c;
+}
+
+.payment__demo {
+  margin: 0.4em 0 0.8em;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  z-index: 2000;
+  padding: 12px 20px;
+  border-radius: 0 0 8px 8px;
+  background-color: #111;
+  color: #ffffff;
+  transition: top 0.2s ease-in-out;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 0;
 }

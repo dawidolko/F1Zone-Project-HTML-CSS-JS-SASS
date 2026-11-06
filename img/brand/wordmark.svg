@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 72" role="img" aria-label="F1Zone">
+  <g transform="translate(13 0) skewX(-12)">
+    <path fill="#fff" d="M0 4h52v13H16v15h31v13H16v23H0z"/>
+    <path fill="#fff" d="M60 4h25v64H69V19H60z"/>
+    <path fill="#fff" d="M100 4h52v13h-52zM100 55h52v13h-52z"/>
+    <path fill="#e10600" d="M134 17h18l-34 38h-18z"/>
+    <path fill="#fff" fill-rule="evenodd" d="M168 4h34a10 10 0 0 1 10 10v44a10 10 0 0 1-10 10h-34a10 10 0 0 1-10-10V14a10 10 0 0 1 10-10zm6 13v38h22V17z"/>
+    <path fill="#fff" d="M220 4h15l21 37V4h15v64h-15l-21-37v37h-15z"/>
+    <path fill="#fff" d="M279 4h43v13h-27v12h23v13h-23v13h27v13h-43z"/>
+  </g>
+</svg>

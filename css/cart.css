@@ -244,13 +244,6 @@ body {
 .payment__input::placeholder {
   color: rgb(163, 163, 163);
 }
-.payment__icons {
-  display: flex;
-}
-.payment__icon {
-  width: 40px;
-  margin-right: 1em;
-}
 .payment__info {
   display: flex;
   justify-content: space-between;
@@ -289,7 +282,7 @@ body {
   align-items: center;
 }
 .contact__logo-img {
-  width: 60px;
+  width: 164px;
 }
 .contact__logo-title {
   display: flex;
@@ -387,7 +380,7 @@ body {
     font-size: 2.5rem;
   }
   .nav__logo-img {
-    width: 40px;
+    width: 132px;
   }
   .nav__basket {
     font-size: 2.5rem;

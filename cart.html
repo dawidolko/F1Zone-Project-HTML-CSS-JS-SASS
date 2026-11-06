@@ -5,27 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Security-Policy" content="default-src &#x27;self&#x27;; img-src &#x27;self&#x27; data:; style-src &#x27;self&#x27; &#x27;unsafe-inline&#x27;; script-src &#x27;self&#x27; &#x27;unsafe-inline&#x27;; font-src &#x27;self&#x27;; connect-src &#x27;self&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;self&#x27;; form-action &#x27;self&#x27;" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <title>Shopping Cart | F1Zone Formula 1 Poster Shop</title>
+    <title>Shopping Cart | F1Zone Demo Poster Shop</title>
     <meta name="description" content="Review the posters in your F1Zone cart, change quantities and fill in the demo checkout form. No real order is placed and no payment is taken." />
     <meta name="robots" content="noindex, follow" />
     <link rel="canonical" href="https://f1.dawidolko.pl/cart.html" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="F1Zone" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:title" content="Shopping Cart | F1Zone Formula 1 Poster Shop" />
+    <meta property="og:title" content="Shopping Cart | F1Zone Demo Poster Shop" />
     <meta property="og:description" content="Review the posters in your F1Zone cart, change quantities and fill in the demo checkout form. No real order is placed and no payment is taken." />
     <meta property="og:url" content="https://f1.dawidolko.pl/cart.html" />
     <meta property="og:image" content="https://f1.dawidolko.pl/img/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="F1Zone preview" />
+    <meta property="og:image:alt" content="An invented graphite race car on a red studio floor, with the F1Zone wordmark" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Shopping Cart | F1Zone Formula 1 Poster Shop" />
+    <meta name="twitter:title" content="Shopping Cart | F1Zone Demo Poster Shop" />
     <meta name="twitter:description" content="Review the posters in your F1Zone cart, change quantities and fill in the demo checkout form. No real order is placed and no payment is taken." />
     <meta name="twitter:image" content="https://f1.dawidolko.pl/img/og-image.jpg" />
 <meta name="author" content="Dawid Olko" />
     <meta name="copyright" content="Dawid Olko" />
     <meta name="theme-color" content="#e10600" />
+    <link rel="icon" type="image/svg+xml" href="/img/brand/mark.svg" />
     <link rel="icon" type="image/png" href="/logo.png" />
     <link rel="preload" href="css/cart.css" as="style" />
     <link rel="stylesheet" href="css/site.css" />
@@ -43,12 +44,11 @@
         <a href="index.html" aria-label="F1Zone home">
           <div class="nav__logo">
             <img
-              src="img/logo-120.webp"
+              src="img/brand/wordmark.svg"
               class="nav__logo-img"
-              alt="logo image"
-              width="50"
-              height="50" />
-            <p>F1Zone</p>
+              alt=""
+              width="132"
+              height="29" />
           </div>
         </a>
         <div class="nav__links">
@@ -72,6 +72,7 @@
 
     <main id="main-content" tabindex="-1">
       <h1 class="cart__heading">Shopping Cart</h1>
+      <p class="cart__demo">Unofficial demo shop. Nothing here is for sale and no order is placed.</p>
       <section class="cart">
         <div class="cart__wrapper">
           <table class="cart__table">
@@ -105,22 +106,7 @@
             placeholder="Elton St 21 22-145"
             class="payment__input" />
           <h2 class="payment__title">Card Information</h2>
-          <div class="payment__icons">
-            <img
-              src="./img/visa.webp"
-              alt="Visa card"
-              class="payment__icon"
-              loading="lazy"
-              width="60"
-              height="40" />
-            <img
-              src="./img/master.webp"
-              alt="Mastercard"
-              class="payment__icon"
-              loading="lazy"
-              width="60"
-              height="40" />
-          </div>
+          <p class="payment__demo">Demo checkout: nothing is charged, stored or sent. Please do not enter real card details.</p>
           <input
             type="password"
             class="payment__input"
@@ -155,17 +141,16 @@
             <a href="index.html" aria-label="F1Zone home">
               <div class="contact__logo-title">
                 <img
-                  src="img/logo-120.webp"
+                  src="img/brand/wordmark.svg"
                   class="contact__logo-img"
-                  alt="logo image"
+                  alt=""
                   loading="lazy"
-                  width="50"
-                  height="50" />
-                <p>F1Zone</p>
+                  width="164"
+                  height="36" />
               </div>
             </a>
             <p class="contact__logo-text">
-              Explore our exclusive collection of F1 posters, capturing the
+              Explore our exclusive collection of race posters, capturing the
               thrill and elegance of motorsport.
             </p>
           </div>
@@ -207,11 +192,17 @@
 
     <footer class="footer">
       <p class="footer__text">
-        © <span class="footer__date"></span> F1Zone | All rights reserved
+        © <span class="footer__date"></span> F1Zone | All rights reserved.
+      </p>
+      <p class="footer__note">
+        F1Zone is an unofficial study project and a demo shop that sells nothing. It is not connected with Formula 1, the FIA or any team, and their trademarks belong to their owners.
+        All cars, helmets, circuits and artwork here are invented and were made for this site.
+        <a class="footer__link" href="https://github.com/dawidolko/F1Zone-Project-HTML-CSS-JS-SASS/blob/main/CREDITS.md">Credits</a>
       </p>
     </footer>
 
     <script src="js/footer.js" defer></script>
+    <script src="js/data.js" defer></script>
     <script src="js/cart.js" defer></script>
   </body>
 </html>

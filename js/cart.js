@@ -5,7 +5,12 @@ const navTotal = document.querySelector(".nav__total");
 const basketInfo = document.querySelector(".basket");
 const basketMessage = document.querySelector(".basket__message");
 
-let cart = JSON.parse(localStorage.getItem("CART")) || [];
+let cart = (JSON.parse(localStorage.getItem("CART")) || [])
+	.map((saved) => {
+		const product = modalProduct.find((item) => item.id === saved.id);
+		return product && { ...product, numberOfUnits: saved.numberOfUnits };
+	})
+	.filter(Boolean);
 updateCart();
 
 function addToCart(id) {
