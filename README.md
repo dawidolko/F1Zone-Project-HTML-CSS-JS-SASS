@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="https://f1.dawidolko.pl/"><img src="docs/readme/banner.webp" alt="F1 Zone: frontend. A poster shop without a framework" width="100%"></a>
+</p>
+
 # F1 Zone
 
 > 🏎️ **A poster shop without a framework** — plain HTML, SCSS and vanilla JavaScript, with a cart that persists in the browser
@@ -12,7 +16,7 @@ There is no framework and no build step beyond compiling SCSS. Every behaviour �
 ![WebP](https://img.shields.io/badge/Images-WebP%20%2B%20fallback-0A84FF)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-**Live:** [f1.dawidolko.pl](https://f1.dawidolko.pl)
+**[Live site](https://f1.dawidolko.pl/)** · [Screenshots](#️-screenshots) · [Getting started](#-getting-started)
 
 ---
 
@@ -26,6 +30,15 @@ There is no framework and no build step beyond compiling SCSS. Every behaviour �
 - **WebP with a fallback** — every photograph ships as both `.webp` and `.jpg`, so modern browsers get the smaller file and older ones still get an image.
 - **SCSS split by concern** — colours, sizes, mixins, reset and one partial per breakpoint, compiled into a single stylesheet.
 - **Alt text written per product** — it lives in the data file next to the image path, so it cannot be forgotten when a poster is added.
+
+---
+
+## 🖼️ Screenshots
+
+<p align="center">
+  <img src="docs/readme/desktop.webp" alt="F1 Zone on a desktop screen" width="74%">
+  <img src="docs/readme/mobile.webp" alt="F1 Zone on a phone" width="22%">
+</p>
 
 ---
 
@@ -70,6 +83,12 @@ sass --watch sass/main.scss css/style.css
 
 ---
 
+## ♿ Accessibility
+
+An accessibility panel in the corner of every page changes text size, contrast, font and motion, and remembers the choice on the device. It sits on top of the markup and does not replace accessible markup.
+
+---
+
 ## 📁 Project Structure
 
 ```
@@ -97,3 +116,11 @@ F1Zone-Project-HTML-CSS-JS-SASS/
 ## 📄 License
 
 MIT © [Dawid Olko](https://dawidolko.pl)
+
+---
+
+## 👨‍💻 Author
+
+**Dawid Olko** · Fullstack / AI Developer
+
+[Portfolio](https://olkodawid.dawidolko.pl) · [CV](https://cv.dawidolko.pl) · [LinkedIn](https://www.linkedin.com/in/dawidolko/) · [GitHub](https://github.com/dawidolko)
