@@ -87,7 +87,7 @@ ul {
   list-style-type: none;
 }
 
-body {
+body {overflow-x:clip;
   font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
 }

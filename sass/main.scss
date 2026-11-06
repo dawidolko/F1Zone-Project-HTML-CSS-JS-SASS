@@ -4,6 +4,7 @@
 @use "sizes" as *;
 
 body {
+  overflow-x: clip;
   font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
   scrollbar-color: #c4c4c4 #f0f0f0;
