@@ -154,6 +154,10 @@ button.nav__menu {
   height: auto;
 }
 
+.slider__img {
+  object-fit: contain;
+}
+
 .cars__body {
   flex-wrap: wrap;
 }
