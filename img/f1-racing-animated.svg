@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="carBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c00;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#e10600;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff0a00;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="carBodyDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e10600;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a00;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="wheel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#111;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2a2a2a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="rim" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#ffed4e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#daa520;stop-opacity:1" />
+    </radialGradient>
+    
+    <style>
+      @keyframes wheelSpin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      
+      @keyframes speedLine {
+        0% { 
+          transform: translateX(0);
+          opacity: 0;
+        }
+        20% {
+          opacity: 0.8;
+        }
+        100% { 
+          transform: translateX(-250px);
+          opacity: 0;
+        }
+      }
+      
+      @keyframes drive {
+        0% { 
+          transform: translate(-200px, 80px);
+        }
+        100% { 
+          transform: translate(800px, 80px);
+        }
+      }
+      
+      .wheel-center { animation: wheelSpin 0.15s linear infinite; }
+      .speed { animation: speedLine 0.4s ease-out infinite; }
+      .speed:nth-child(2) { animation-delay: 0.1s; }
+      .speed:nth-child(3) { animation-delay: 0.2s; }
+      .speed:nth-child(4) { animation-delay: 0.3s; }
+      .car { animation: drive 4s linear infinite; }
+    </style>
+  </defs>
+  
+  <!-- Speed effect lines -->
+  <g opacity="0.6">
+    <line class="speed" x1="600" y1="140" x2="750" y2="140" stroke="#e10600" stroke-width="4" stroke-linecap="round"/>
+    <line class="speed" x1="630" y1="170" x2="780" y2="170" stroke="#ff4444" stroke-width="3" stroke-linecap="round"/>
+    <line class="speed" x1="610" y1="200" x2="760" y2="200" stroke="#e10600" stroke-width="4" stroke-linecap="round"/>
+    <line class="speed" x1="640" y1="230" x2="790" y2="230" stroke="#ff4444" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- F1 Car -->
+  <g class="car">
+    
+    <!-- Rear wing -->
+    <g>
+      <path d="M 60 50 L 85 48 L 88 58 L 63 60 Z" fill="url(#carBody)" stroke="#000" stroke-width="1.5"/>
+      <path d="M 60 68 L 85 66 L 88 76 L 63 78 Z" fill="url(#carBody)" stroke="#000" stroke-width="1.5"/>
+      <rect x="58" y="60" width="3" height="10" fill="#111"/>
+      <rect x="86" y="58" width="3" height="10" fill="#111"/>
+    </g>
+    
+    <!-- Main body -->
+    <ellipse cx="280" cy="90" rx="180" ry="48" fill="url(#carBody)" stroke="#000" stroke-width="2"/>
+    <ellipse cx="280" cy="86" rx="180" ry="44" fill="url(#carBodyDark)" opacity="0.3"/>
+    
+    <!-- Cockpit -->
+    <g>
+      <path d="M 290 52 Q 320 42 350 52 L 338 92 L 302 92 Z" fill="#0a0a0a" stroke="#000" stroke-width="2" opacity="0.9"/>
+      <ellipse cx="320" cy="72" rx="26" ry="16" fill="#2266aa" opacity="0.4"/>
+      <!-- Halo -->
+      <path d="M 305 56 Q 320 42 335 56" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round"/>
+      <path d="M 305 56 Q 320 44 335 56" fill="none" stroke="#444" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Side pods -->
+    <ellipse cx="270" cy="94" rx="100" ry="38" fill="#c00" stroke="#000" stroke-width="1.5"/>
+    <ellipse cx="270" cy="90" rx="100" ry="36" fill="#e10600" opacity="0.9"/>
+    
+    <!-- Air intake -->
+    <ellipse cx="290" cy="62" rx="24" ry="13" fill="#0a0a0a" stroke="#000" stroke-width="1.5"/>
+    <ellipse cx="290" cy="62" rx="19" ry="10" fill="#1a1a1a"/>
+    
+    <!-- Nose cone -->
+    <path d="M 460 86 Q 530 88 590 90 Q 530 92 460 94 Z" fill="url(#carBody)" stroke="#000" stroke-width="2.5"/>
+    <path d="M 575 90 L 615 90 L 613 92 L 573 92 Z" fill="#111" stroke="#000" stroke-width="1.5"/>
+    
+    <!-- Front wing -->
+    <g>
+      <path d="M 585 73 L 625 74 L 623 78 L 583 77 Z" fill="#0a0a0a" stroke="#000" stroke-width="1.5"/>
+      <path d="M 585 102 L 625 103 L 623 107 L 583 106 Z" fill="#0a0a0a" stroke="#000" stroke-width="1.5"/>
+      <line x1="600" y1="78" x2="600" y2="104" stroke="#111" stroke-width="2.5"/>
+      <line x1="612" y1="78" x2="612" y2="104" stroke="#111" stroke-width="2.5"/>
+    </g>
+    
+    <!-- Racing stripes and number -->
+    <g>
+      <path d="M 180 82 L 430 86 L 430 94 L 180 90 Z" fill="#fff" opacity="0.2"/>
+      <circle cx="230" cy="88" r="10" fill="#ffd700" stroke="#000" stroke-width="1.5"/>
+      <text x="230" y="93" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#000">1</text>
+    </g>
+    
+    <!-- Sponsor decals -->
+    <rect x="200" y="80" width="45" height="6" rx="1" fill="#fff" opacity="0.7"/>
+    <rect x="310" y="80" width="38" height="6" rx="1" fill="#fff" opacity="0.7"/>
+    
+    <!-- Rear Wheel -->
+    <g>
+      <ellipse cx="150" cy="135" rx="36" ry="38" fill="url(#wheel)" stroke="#000" stroke-width="2"/>
+      <ellipse cx="150" cy="135" rx="24" ry="25" fill="url(#rim)" stroke="#111" stroke-width="1.5"/>
+      <g class="wheel-center" transform="translate(150, 135)">
+        <line x1="0" y1="-22" x2="0" y2="22" stroke="#000" stroke-width="2.5"/>
+        <line x1="-19" y1="-11" x2="19" y2="11" stroke="#000" stroke-width="2.5"/>
+        <line x1="-19" y1="11" x2="19" y2="-11" stroke="#000" stroke-width="2.5"/>
+        <line x1="-22" y1="0" x2="22" y2="0" stroke="#000" stroke-width="2.5"/>
+      </g>
+      <circle cx="150" cy="135" r="6" fill="#c0c0c0" stroke="#000" stroke-width="1"/>
+    </g>
+    
+    <!-- Front Wheel -->
+    <g>
+      <ellipse cx="540" cy="135" rx="32" ry="34" fill="url(#wheel)" stroke="#000" stroke-width="2"/>
+      <ellipse cx="540" cy="135" rx="21" ry="22" fill="url(#rim)" stroke="#111" stroke-width="1.5"/>
+      <g class="wheel-center" transform="translate(540, 135)">
+        <line x1="0" y1="-19" x2="0" y2="19" stroke="#000" stroke-width="2.5"/>
+        <line x1="-16" y1="-9" x2="16" y2="9" stroke="#000" stroke-width="2.5"/>
+        <line x1="-16" y1="9" x2="16" y2="-9" stroke="#000" stroke-width="2.5"/>
+        <line x1="-19" y1="0" x2="19" y2="0" stroke="#000" stroke-width="2.5"/>
+      </g>
+      <circle cx="540" cy="135" r="5" fill="#c0c0c0" stroke="#000" stroke-width="1"/>
+    </g>
+    
+    <!-- Exhaust -->
+    <g opacity="0.9">
+      <rect x="80" y="84" width="14" height="8" rx="2" fill="#111" stroke="#000" stroke-width="1"/>
+      <rect x="80" y="96" width="14" height="8" rx="2" fill="#111" stroke="#000" stroke-width="1"/>
+      <ellipse cx="81" cy="88" rx="2" ry="3" fill="#ff6600" opacity="0.6"/>
+      <ellipse cx="81" cy="100" rx="2" ry="3" fill="#ff6600" opacity="0.6"/>
+    </g>
+    
+    <!-- Aero details -->
+    <path d="M 220 72 L 238 71 L 239 77 L 221 78 Z" fill="#0a0a0a" opacity="0.6"/>
+    <path d="M 380 72 L 398 71 L 399 77 L 381 78 Z" fill="#0a0a0a" opacity="0.6"/>
+    
+    <!-- Mirrors -->
+    <ellipse cx="278" cy="68" rx="6" ry="3" fill="#2266aa" opacity="0.5" stroke="#000" stroke-width="0.5"/>
+    <ellipse cx="328" cy="68" rx="6" ry="3" fill="#2266aa" opacity="0.5" stroke="#000" stroke-width="0.5"/>
+    
+  </g>
+  
+</svg>
